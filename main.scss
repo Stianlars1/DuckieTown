@@ -1,0 +1,2063 @@
+@import "./hrefs/lesMer";
+
+@import './variables';
+
+@import './hrefs/contact';
+
+@import './hrefs/butikk';
+
+@import './hrefs/nav_mobile';
+
+@font-face { font-family: Wotfard; src: local("Wotfard"), url("/fonts/wotfard/wotfard-regular-webfont.woff2") format("woff2"); font-style: normal; font-weight: 400; font-display: fallback; }
+
+@font-face {
+    font-family: 'wotfard';
+    src: url('./fonts/wotfard-regular-webfont.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+
+/*          FONTER:
+    font-family: 'Architects Daughter', cursive;
+
+    font-family: 'Indie Flower', cursive;
+
+    font-family: 'Permanent Marker', cursive;
+
+    font-family: 'Shadows Into Light', cursive;
+*/
+
+
+a {
+    text-decoration: none;
+    color: rgb(244, 244, 244);
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: scroll;
+
+    
+
+    /*      Container      */
+    .container {
+        width: 100%;
+        height: 100%;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        position: relative;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+
+        @media screen and (min-width: 900px) {
+            width: 1180px;
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 100%;
+        }
+
+        
+
+
+        /*      NAV-BAR      */
+        nav {
+            height: 80px;
+            display: flex;
+            background-color: $light_blue;
+            align-items: center;
+            justify-content: space-between;
+            top: 0;
+            right: 0;
+            left: 0;
+
+            padding: 0 40px;
+
+            z-index: 20;
+
+            @media only screen and (max-width: 640px) {
+                padding: 0 40px;
+                justify-content: space-between;
+
+                a {
+                    text-transform: lowercase;
+                }
+            }
+
+
+    
+            @media only screen and (min-width: 800px) {
+                justify-content: space-around;
+
+                a {
+                    text-transform: uppercase;
+                }
+
+            }
+
+
+            /*      NAV Logo DUCK      */
+            a {
+                
+                #header_logo {
+                    display: inline-block;
+                    width: 70px;
+
+                    &:hover {
+                        transform: rotate(10deg);
+                        transition: all ease-in-out 0.5s;
+                        
+                    }
+                }
+            }
+            /*      NAV UL LI      */
+            ul {
+                display: flex;
+
+                @media only screen and (max-width: 640px) {
+                    display: none;
+                }
+
+
+
+                li {
+                    display: block;
+
+                    
+
+                    a {
+                        margin: 5px 10px;
+                        padding: 3px 10px;
+                        border-bottom: 0;
+
+                        text-transform: capitalize;
+                        font-family: 'Montserrat', sans-serif;
+                        transition: border-bottom .8s  ease;
+
+
+
+
+
+                        @media screen and (max-width: 640px) {
+                            font-size: 0.9rem;
+                            margin: 5px;
+                        }
+
+
+                        &:hover {
+                
+                            border-bottom: 2px solid $duckGul;
+
+                        }
+                    }
+                }
+            }
+        }
+
+    
+
+        
+
+        /*      Main      */
+
+        // contact
+        
+
+        main {
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: relative;
+
+
+        
+
+        
+
+
+        /*      HERO      */
+            .hero {
+                box-sizing: border-box;
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: relative;
+
+                .header_post {
+
+
+                    /*
+                    Instillinger for ordinært BILDE, uten VIDEO
+                    background-image: url(./pictures/bg2.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    */
+                    // VIDEO VIDEO BAKGRUNN
+                    #video {
+                        position: absolute;
+                        z-index: -1;
+                        object-fit: cover;
+                        width: 100%;
+                        height: 400px;
+                        opacity: 32%;
+                        background-color: black;
+                        animation: opacity_bg 2s ease-in-out;
+
+
+                        @keyframes opacity_bg {
+                            0% {opacity: 100%;
+                            }
+
+                            100% {opacity: 30%;
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+
+                            background-color:  #242424;
+                        }
+
+
+
+                    }
+                    justify-content: center;
+                    
+
+                    display: flex;
+                    align-items: center;
+                    // UTEN VIDEO BAKGRUNN ( for ordinært bilde):: justify-content: flex-end;
+                    width: 100%;
+                    height: 400px;
+                    position: relative;
+
+                    /*
+                        Innstillinger for respponsivt UTEN VIDEO. altså kun for ordinær BG.
+                        @media screen and (max-width: 500px) {
+                        background-image: url(./pictures/bg2-flipped-blur.jpg);
+                        justify-content: center;
+                        align-items: center;
+                        background-size: cover;
+                        background-position: right;
+                    } */
+                    
+
+                    h1 {
+                        font-family: 'Lato';
+                        font-weight: 900;
+                        font-size: 3.4rem;
+                        letter-spacing: 0.5rem;
+                        width: 625px;
+                        color: $even_lighter_bruh;
+                        text-shadow: 0px 2px 2px rgba(53, 53, 53, 0.879);
+                        text-transform: uppercase;
+                        margin: 10px 20px;
+                        padding: 2px 5px;
+
+                        // Cheesyy?? Fjern da vel.. =>  :`(
+                        animation: h1_intro .65s ease, h1_grow 20s ease 1s infinite;
+/*                         animation-iteration-count: infinite;
+ */
+
+                        @keyframes h1_grow {
+                            0% {transform: scale(1);}
+
+                            100% { transform: scale(1.2); }
+                        }
+                    
+                        @media screen and (max-width: 640px) {
+                            display: inline-block;
+                            width:  100%;
+                            font-size: 3rem;
+                            letter-spacing: 0;
+                            text-shadow: 1px 3px 2px rgba(135, 135, 135, 1);
+
+
+                        }
+
+                        @media screen and (min-width: 800px) {
+                            display: inline-block;
+                            font-size: 4.89rem;
+                            letter-spacing: 0;
+/*                             text-shadow: 1px 3px 2px rgba(135, 135, 135, 0.874);
+ */
+
+                        }
+                        
+                        @keyframes h1_intro {
+
+                            0% {
+                                text-shadow: 20px -30px 20px rgba(53, 53, 53, 0);
+                                opacity: 0%;
+                                transform: scale(3);
+                            }
+
+                            
+                            
+                            100% {
+                                text-shadow: 0px 2px 2px rgba(53, 53, 53, 0.879);
+                                opacity: 100%;
+                                transform: scale(1);
+
+
+                            }
+                        }
+
+                        
+
+                        /* @keyframes h1_outro_ongoing {
+                            0% {
+                                font-size: 3.4rem;
+                            }
+                            100% {
+                                font-size: 500%;
+
+                            }
+                        } */
+                        
+                    }
+
+                    overflow: hidden;
+
+                }
+
+                .prosjektet {
+                    background-image: url(./pictures/bubbles.svg), url(./pictures/SVG/Asset1.svg);
+                    background-position: left top, bottom left;
+                    background-position-x: -150px, 700px;
+                    background-position-y: 200px, 260px;
+                    background-size: auto, 140px;
+                    background-repeat: no-repeat;                    
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                /* &:hover {background-color: $duckGul;} */
+
+
+                    @media screen and (max-width: 900px) {
+                        background-position-x: -150px, 600px;
+                        background-size: auto, 100px;
+                        background-position-y: 240px, 300px;
+
+                    }
+                    @media screen and (max-width: 700px) {
+                        background-position-x: -170px, 470px;
+                        background-position-y: 260px, 330px;
+                        background-size: auto, 70px;
+
+
+                    }
+                    @media screen and (max-width: 600px) {
+                        background-image: url(./pictures/bubbles.svg);
+                        padding: 0;
+                    }
+
+
+                    align-items: center;
+                    padding-top: 25px;
+                    text-align: center;
+                    height: 400px;
+
+                    h2 {
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: lighter;
+                        font-size: 2.5rem;
+                        display: inline-block;
+                        border-bottom: 1px solid black;
+
+                        
+                    }
+
+                    p  {
+                        width: 70%;
+                        margin: 15px;
+                        font-family: 'watford', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                        font-size: 1.4rem;
+                        line-height: 2rem;
+                        letter-spacing: 1px;
+
+                        @media screen and (max-width: 640px) {
+                            font-size: 1.10rem;
+                            width: 85%;
+
+                        }
+                        
+                    }
+                }
+
+
+                .om_oss {
+                    background-color: $light_blue;
+                    align-items: center;
+                    text-align: center;
+                    padding: 0px 0px 30px;
+
+                    
+                    h2 {
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: light;
+                        font-size: 2.5rem;
+                        display: inline-block;
+                        padding-bottom: 5px;
+                        margin: 20px;
+                        border-bottom: 1px solid $duckGul;
+                        color: rgb(233, 233, 233);
+                        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.598);
+
+                    }
+
+                
+                    
+                    .personer {
+
+                        display: flex;
+                        color: rgb(233, 233, 233);
+                        font-family: 'Lato';
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        margin: 15px auto 0px;
+                        padding: 0 10px;
+
+                        flex-wrap: wrap;
+
+
+                        .user_profile {
+                            width: 100px;
+                        }
+                        
+
+                        .profiles {
+                            text-align: center;
+                            align-items: center;
+                            padding: 15px;
+                            position: relative;
+                            margin: 15px 8px;
+                            max-width: 80%;
+
+                            border-radius: 2em;
+                            background-color: $lighter_blue;
+                            box-shadow: 3px 4px 10px rgba(21, 21, 21, 0.386);
+
+                            animation: all 0.3s ease;
+
+                            @media screen and (max-width: 640px) {
+                                max-width: 95%;
+                            }
+                            
+                            h3 {
+                                margin: 10px 5px;
+                                text-shadow: 0 2px 5px rgba(0, 0, 0, 0.598);
+                            }
+
+                            ul {
+                                text-align: left;
+                                list-style-type: none;
+                                font-weight: 400;
+                                font-size: 1rem;
+                                font-family: "Poppins";
+                                text-shadow: 1px 1px 2px rgb(0, 0, 0);
+                            }
+                            // button ul center info
+                            .ul_profiles_felles {
+                                text-align: center;
+                            }
+
+
+
+                            // person singel card HOVER
+                            &:hover {
+                                box-shadow: 3px 4px 10px rgba(247, 247, 247, 0.399);  
+                            // transform: scale(1.03);
+                                background-color: #8BC6EC;
+                                background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+                                background-size: auto;
+                                transform: scale(1.05);
+
+                                
+                                
+                            }
+
+                            //paragraph hidden
+                            .show_info_profile {
+                                text-transform: initial;
+                                line-height: 1.6rem;
+                                color: rgb(227, 227, 227);
+                                text-shadow: 0px 1px 3px rgba(43, 43, 43, 0.317);
+                                font-family: "watford", sans-serif;
+                                letter-spacing: 2px;
+                                padding: 5px 20px;
+                                animation: all 0.5s ease;
+                                font-size: 1.12rem;
+
+
+                                @media screen and (max-width: 640px) {
+                                    padding: 5px 2px;
+
+                                }
+
+                            }
+
+                            // button show info
+                            .show_info {
+                                width: 90px;
+                                height: 30px;
+                                background: transparent;
+                                border: 1px solid white;
+                                color: white;
+                                cursor: pointer;
+                                margin: 30px 15px 15px 15px;
+                                border-radius: 5rem;
+                                transition: all 1s ease-in-out 200ms;
+
+                                &:hover {
+                                    background-image: linear-gradient( 106.9deg,  rgba(148,14,60,1) 60.9%, rgba(3,22,27,1) 122.3% );
+                                    
+                        
+                                    background-color: $even_lighter_bruh;
+                                    background-image: linear-gradient(135deg, #91c8ed 0%, #979ae3 80%);
+                                    transition: all 1s ease 200ms;
+
+                                }
+                            }
+
+                            //Hidden paragraph show info
+                            .hidden {
+                                display: none;
+                                animation: all 0.5s ease-in-out 200ms;
+                            }
+
+                        }
+                    }
+                }
+
+                .fremdrift {
+                    padding: 20px 20px;
+                    padding-bottom: 0;
+                    display: block;
+                    margin: 0;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    /* background-image: url(./pictures/SVG/Asset3test.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position-y: -2px; */
+                    position: relative;
+                    align-items: center;
+                    box-sizing: border-box;
+                    overflow: hidden;
+
+                    #fremdrift_bg {
+                        position: absolute;
+                        top: -3px;
+                        right: -5px;
+                        left: -5px;
+                        width: 110%;
+                        
+                    }
+
+                    .fremdrift_wrapper {
+                        box-sizing: border-box;
+                        height: 100%;
+                        box-sizing: border-box;
+                        overflow: hidden;
+                    
+
+
+
+                        h2 {
+                            font-family: "Montserrat", sans-serif;
+                            font-size: 2.5rem;
+                            font-weight: 900;
+                            letter-spacing: 2px;
+                            color: $light_blue;
+                            text-transform: uppercase;
+                            text-shadow: 0.5px 1px 3px rgba(0, 0, 0, 0.468);
+                            margin: 40px auto 20px auto;
+                        }
+
+                        .underoverskrift_fremdrift {
+                            font-family: "Poppins", sans-serif;
+                            font-size: 1rem;
+                            letter-spacing: 1px;
+
+                        }
+    
+                        @media screen and (max-width: 500px) {
+                            background-position-y: -2px;
+                        }
+
+                
+    
+    
+                        .timeline_wrapper {
+    
+                            border-left: 5px solid $light_blue;
+                            margin: 20px auto;
+                            padding: 20px 20px 0px 30px;
+                            width: 60%;
+                            float: center;
+                            display: block;
+                            height: 100%;
+                            position: relative;
+                            box-sizing: border-box;
+
+                            
+                        
+                            
+                            #last_element {
+                                margin-bottom: 15px;
+                            }
+                            .timeline_element {
+    
+                                padding: 10px 15px;
+                                border: 1px solid white;
+                                border-radius: 0.7rem;
+                                line-height: 1.7;
+                                position: relative;
+                                height: auto;
+                                margin-bottom: 100px;
+                                
+    
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                background-color: #8BC6EC;
+                                background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+                                box-sizing: border-box;
+
+                                box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.242);
+
+
+                                    /*   SPAN for logg - rød tekst ....   */
+
+                                .avtalt_tid {
+                                    color: $red_col;
+                                    font-weight: bold;
+                                }
+
+                                /*   SPAN for logg - rød tekst ....   */
+                                .oppsummering {
+                                    color: $red_col;
+                                    font-weight: bolder;
+                                    text-transform: uppercase;
+                                    text-decoration: underline;
+                                    display: inline;
+                                }
+                                .gronn_ok {
+                                    color: rgb(124, 203, 5);
+                                    font-weight: bolder;
+                                    text-transform: uppercase;
+                                    text-decoration: underline;
+                                    display: inline;
+                                }
+                                .kode_para {
+                                    color: rgb(48, 48, 48);
+                                    font-weight: 400;
+                                    font-family: "Lato", sans-serif;
+                                    font-style: italic;
+                                    border-bottom: 1px dotted black;
+                                    display: inline;
+                                }
+    
+                                /*  LOGG-BILDER  */
+                                .logg_photo {
+                                    position: absolute;
+                                    max-width: 200px;
+                                    max-height: 200px;
+                                    left: -275px;
+                                    border-radius: 40%;
+                                    margin: 1rem;
+    
+    
+                                    &::after {
+                                        content: "<";
+                                        position: absolute;
+                                        z-index: 10;
+                                        color: yellow;
+                                        width: 20px;
+                                        height: 20px;
+                                        
+                                    }
+                                }
+
+                                /*  LOGG  BILDER  Husk:: resposiv!! ( media @ queries   ) */
+                                .logg_photo_uke39 {
+                                    position: absolute;
+                                    max-width: 250px;
+                                    max-height: 250px;
+                                    left: -65%;
+                                    border-radius: 40%;
+                                    margin: 15px;
+                                    top: -15px;
+                                    margin: 1rem;
+
+    
+    
+                                    &::after {
+                                        content: "<";
+                                        position: absolute;
+                                        z-index: 10;
+                                        color: yellow;
+                                        width: 20px;
+                                        height: 20px;
+                                        
+                                    }  
+                                }
+
+                                .logg_photo_2 {
+                                    position: absolute;
+                                    max-width: 200px;
+                                    max-height: 200px;
+                                    left: -490px;
+                                    border-radius: 50%;
+                                    margin: 1rem;
+                                }
+
+                                .okonomi {
+                                    border-radius: 0;
+                                }
+                                .okonomi_height {
+                                    border-radius: 0;
+                                    height: 100%;
+                                }
+    
+                                /* Responsive, max size when phone screen is SMALL  */
+                                @media screen and (max-width: 1200px) {
+                                    .logg_photo {
+                                        position: initial;
+                                        max-width: 90%;
+                                        max-height: 90%;
+                                        left: 0px;
+                                        margin: 20px;
+                                    }
+                                    .logg_photo_2 {
+                                        position: inherit;
+                                        max-width: 90%;
+                                        max-height: 90%;
+                                        left: 0px;
+                                    }
+
+                                    .logg_photo_uke39 {
+                                        position: inherit;
+                                        max-width: 90%;
+                                        max-height: 90%;
+                                        left: 0px;
+                                    }
+
+                                    
+    
+                                }
+                            
+                                .header_approved_wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-around;
+                                    box-sizing: border-box;
+    
+                                    h2 {
+                                        font-family: "Montserrat";
+                                        text-transform: uppercase;
+                                        font-size: 1.5rem;
+                                        margin: 0;
+                                        display: inline-block;
+                                        color: white;
+                                        letter-spacing: 2px;
+
+                                        @media screen and (max-width: 640px) {
+                                            font-size: 1.2rem;
+                                        }
+                                    }
+        
+                                    .approved_img {
+                                        display: inline-block;
+                                        width: 30px;
+                                        height: 30px;
+                                        margin: 0 10px;
+                                    }
+                                }
+    
+                                h3 {
+                                    font-weight: bold;
+                                    margin: 0;
+                                    font-family: "Lato", sans-serif;
+                                    font-size: 1.2em;
+                                    display: inline-block;
+                                    color: $dark_blue;
+                                }
+    
+                                p {
+                                    font-family: "wotfard", sans-serif;
+                                    font-size: 1.12rem;
+                                    color: $black_timeline;
+                                    margin-bottom: 32px;
+                                    line-height: 32px;
+                                }
+    
+                                a {
+                                    text-transform: uppercase;
+                                    color: $shitDark;
+                                    font-family: "Poppins";
+                                    text-decoration: underline;
+                                    margin: 2px 5px ;
+                                }
+
+
+                                /*  Timeline ELEMENT selve timeline ikonene for tidslinje  */
+    
+                                &::before {
+                                    content: "";
+                                    display: block;
+                                    position: absolute;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    background-color: #fff;
+                                    border: 3px solid $red_col;
+                                    top: 10px;
+                                    left: -41.39px;
+                                }
+    
+                                &::after {
+                                    content: "";
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-color: transparent $lighter_blue transparent transparent;
+                                    border-width: 8px;
+                                    position: absolute;
+                                    left: -17px;
+                                    top: 10px;
+    
+                        
+                                }
+    
+                            }
+
+                        
+    
+                            @media screen and (max-width: 640px) {
+                                
+                                width: 95%;
+                                
+                            }
+                            @media screen and (min-width: 1200px) {
+                                
+                                float: right;
+            
+                            }
+                        
+                        }
+    
+    
+                        #se_tidslinje_button {
+                            display: block;
+                            color: black;
+                            text-transform: uppercase;
+                            font-family: "Lato", sans-serif;
+                            background-color: transparent;
+                            margin: 5px 15px;
+                            padding: 10px 20px;
+                            display: inline-block;
+                            border: turquoise solid 1px;
+    
+                        }
+
+
+
+
+                        /*  SVG NEDERST PÅ MAIN */
+                        #fremdrift_bg_nede {
+                            position: absolute;
+                            bottom: -4px;
+                            right: -20px;
+                            left: -20px;
+                            width: 110%;
+                        }
+
+
+                        #fremdrift_les_mer_wrapper {
+                            width: 100%;
+                            display: flex;
+                            height: 100%;
+                            justify-content: center;
+                            bottom: 30%;
+                            margin-bottom: 15px;
+                            top: 0;
+
+
+
+
+                            #fremdrift_les_mer {
+                                color: white;
+                                margin: 1rem;
+                                padding: 5px 10px;
+                                background: #8BC6EC;
+                                border: 1px solid transparent;
+                                border-radius: 5rem;
+                                display: block;
+                                font-weight: 500;
+    
+    
+                                font-family: "Montserrat", sans-serif;
+    
+                                width: 8rem;
+    
+                                display: inline-block;
+                                
+
+                                // HOVER BORDER SE MER
+                                &:hover {
+                                    background-color: #8BC6EC;
+                                    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+                                    background-size: auto;
+                                    /* background-color: $niceHoverBg;
+                                    border: 1px solid $light_blue; */
+                                    box-shadow: 0 5px 15px #8bc5ecbc;
+                                    color: white;
+                                    border: 1px solid white;
+                                    border-radius: 5rem;
+                                    
+                                }
+
+                                &:active, &:visited {
+                                    
+                                    background-color: $light_blue;
+                                    /* background-color: $niceHoverBg;
+                                    border: 1px solid $light_blue; */
+                                    color: white;
+                                    border: 1px solid rgba(255, 255, 255, 0.747);
+                                    border-radius: 5rem;
+                                        
+                                    
+                                }
+    
+                                @media screen and (min-height: 640) {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        
+                    }
+
+            
+
+                }
+
+                /*      ARTIKLER         */
+
+
+                /*      Container artikler */
+                .articles_container {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    /* border-top: 1px solid black; */
+                    background-color: $light_blue;
+
+
+
+
+                    /* Bakgrunn for Artikkel-container */
+                    .articles_container_bg_top {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+
+                    }
+
+                                                                /*  Wrapper for = ==    ALLE    == =    ARTIKLER*/
+                    .articles_wrapper {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        box-sizing: border-box;
+                        overflow: hidden;
+
+                        @media screen and (max-width: 640px) {
+                            flex-direction: column;
+                        }
+
+                        
+
+                    /*  Selve artikkel elementet  == (er lik)  H2 Overskrift for artikkel, h3 fo runderoverskrift, P = paragrafene */
+                        
+
+                        /*      ON CLICK ELEMENT WIDTH == 100% */
+
+                        // Toggle read article element content ==
+
+                    
+
+
+                        .active {
+                            height: 100vh;
+                            /* margin: 5rem auto; */
+                            width: 100%;
+                            
+                            
+
+                            /* border: 1px solid black; */
+                            background-color: white;
+                            background: white!important;
+
+                            //background-color: $light_blue;
+                            z-index: 3000;
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-image: none;
+                            overflow: scroll;
+                            
+                            animation: articleOpener .8s ease-out;
+
+
+                            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.564);
+                            
+                            @keyframes articleOpener {
+                                0% {transform: translateY(100%)};
+                                100% {transform: translateY(0%)};
+                            }
+                            
+                            
+                            @media screen and (max-width: 640px) {
+                                h2 {
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            @media screen and (min-width: 1180px) {
+                                padding: 0 10rem;
+                            }
+                            @media screen and (max-width: 1180px) and (min-width: 900px) {
+                                padding: 0 4rem;
+                            }
+                            @media screen and (min-width: 1500px) {
+                                padding: 0 20rem;
+                            }
+
+                            &:hover {
+                                cursor: initial;                                
+                            }
+
+                            // Paragraf i article_post // active // artikkel tekst markert objekt..
+                            .markør {
+                                color: $red_col;
+                                font-weight: bold;
+                                font-style: italic;
+                            }
+
+                            // Markere quotes under bilder
+
+
+                            .close_article {
+                                
+
+                                position: fixed;
+                                
+                                color: rgb(40, 40, 40);
+                                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.447);
+                                width:1.5rem;
+                                height: 1.5rem;
+                                z-index: 110;
+                                cursor: pointer;
+                                outline: none;
+                                border: 0;
+                                top: 15px;
+                                right: 30px;
+                                margin: 0;
+                                padding: 0;
+                                background: transparent;
+
+
+                                &:hover {
+                                    background: transparent; 
+                                }
+
+                                &::after {
+                                    content: url(./pictures/SVG/times-solid.svg);
+                                    
+                                    bottom: 0;
+                                    left: 0;
+                                    top: 0;
+                                    right: 0;
+                                    
+                                    position: absolute;
+                                }
+
+                                &::before {
+                                    content: "Lukk";
+                                    position: absolute;
+                                    top: 2rem;
+                                    right: -4px;
+                                    left: -4px;
+                                    bottom: 0;
+                                }
+                                
+                            }
+                            
+                            h2 {
+                                font-size: 2rem;
+                                margin: 35px 50px 15px;
+                                font-family: 'wotfard', sans-serif;
+                                color: rgb(53, 53, 53);
+
+                                @media screen and (max-width: 640px) {
+                                    font-size: 1.5rem;
+                                    padding: 0 20px;
+                                }
+                            }
+
+                            h3 {
+                                margin-bottom: 15px;
+                                position: relative;
+                                padding-bottom: 5px;
+                                color: rgb(124, 124, 124);
+                                font-style: italic;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    border-bottom: 2px solid rgb(56, 56, 56);
+                                    width: 50%;
+                                    bottom: 0;
+                                    left: 25%;
+                                    right: 25%;
+                                }
+
+                                
+                            }
+
+                            .article_post {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                width: 90%;
+                                text-align: left;
+                                margin: 0 auto;
+
+                                position: relative;
+
+                                box-sizing: border-box;
+                                overflow: hidden;
+                                background-color: white;
+
+                                /*  MEDIA QUERIS ARTIKKEL CONTENT == P, bilder, LISTER etc... paragraf basically */
+                                @media screen and (max-width: 640px) {
+                                    width: 100%;
+
+                                    // make article img larger on small screens
+
+                                }
+
+
+                                // Img article size responsive
+
+                                .img_in_article, .position_article_img_left {
+                                    max-width: 100%;
+                                    margin: 1em 0;
+
+                                    // make article img larger on small screens
+
+                                    @media screen and (max-width: 650px) {
+                                        max-width: 100%;
+                                        display: block;
+                                    }   
+
+                                }
+/*                                 .position_article_img_left {
+
+                                    @media screen and (max-width: 650px) {
+                                        max-width: 100%;
+                                        min-width: 85%;
+                                        float: none;
+                                        margin: 1rem auto;
+                                        display: block;
+                                    }
+                                } */
+
+                                .bigger_img {
+                                    max-width: 100%;
+                                    min-width: 90%;
+                                }
+
+
+                                figcaption {
+                                    font-family: "wotfar", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                                    font-size: 1rem;
+                                    color: $para_text;
+                                }
+
+
+                                h4 {
+                                    font-weight: bolder;
+                                    font-size: calc(1.19rem);
+                                    text-decoration: underline;
+                                    font-family: 'Wotfard', sans-serif;
+    
+                                    color: black;
+                                    letter-spacing: 2px;
+                                    margin: 1.5rem 20px 0rem 20px;
+
+                                }
+
+
+
+                                p {
+                                    /* margin-bottom: 1.5rem; */
+                                    margin: 1em 20px 1em 20px;
+                                    line-height: 1.61em;
+                                    font-size: 1.125rem;
+                                    font-weight: 400;
+                                    font-family: /* 'Wotfard', */ 'Open Sans','Helvetica Neue', sans-serif; 
+                                    /* line-height: 24px; */
+                                    text-align: normal;
+                                    /* text-justify: inter-word; */
+
+                                    color: rgb(130, 130, 130);
+
+                                    
+                                }
+
+
+
+                                ul {
+                                    margin: 0 0 0 1rem;
+                                    padding: 0 0 0 1rem;
+
+                                    li {
+                                        font-family: "Helvetica Neue",Arial,sans-serif; 
+                                        font-size: 1rem;
+                                        line-height: 24px;
+                                        margin: 1rem;
+                                        color: rgb(24, 24, 24);
+
+                                    }
+                                }
+
+
+                                
+                            }
+                            
+
+                            /* &::after {
+                                content: "";
+                                background-image: url(./pictures/artikkel_bilder/programming.webp);
+
+                                background-size: cover;
+                                background-position: top;
+                                top: 0;
+                                right: 0;
+                                left: 0;
+                                bottom: 60%;
+                                opacity: 1;
+                                position: absolute;
+                                
+                            } */
+                        } 
+
+                        // Shared info for Active === darkmode Active
+
+                        .article_post     {
+                            h4 {
+                                font-weight: bolder;
+                                font-size: calc(1.19rem);
+                                text-decoration: underline;
+                                font-family: 'Wotfard', sans-serif;
+
+                                color: black;
+                                letter-spacing: 2px;
+                                margin: 1.5rem 20px 0rem 20px;
+
+                            }
+
+
+
+                            p {
+                                /* margin-bottom: 1.5rem; */
+                                margin: 1em 20px 1em 20px;
+                                line-height: 1.61em;
+                                font-size: 1.125rem;
+                                font-weight: 400;
+                                font-family: /* 'Wotfard', */ 'Open Sans','Helvetica Neue', sans-serif; 
+                                /* line-height: 24px; */
+                                text-align: normal;
+                                /* text-justify: inter-word; */
+
+                                color: $para_text;
+
+                                
+                            }
+
+
+
+                            ul {
+                                margin: 0 0 0 1rem;
+                                padding: 0 0 0 1rem;
+
+                                li {
+                                    font-family: "Helvetica Neue",Arial,sans-serif; 
+                                    font-size: 1rem;
+                                    line-height: 24px;
+                                    margin: 1rem;
+                                    color: rgb(130, 130, 130);
+
+                                }
+                            }
+                        }                   
+
+
+
+
+
+                    .active_darkMode {
+                            height: 100%;
+                            /* margin: 5rem auto; */
+                            width: 100%;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+
+                            /* border: 1px solid black; */
+                            background-color: #242424;
+                            background: #242424!important;
+
+                            //background-color: $light_blue;
+                            z-index: 3000;
+                            position: fixed;
+                            background-image: none;
+                            overflow: scroll;
+                            
+                            /* transform: translateY(100%); */
+                            animation: articleOpener .8s ease-out;
+
+                            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.564);
+                            color: #d4d4d4;
+                            
+
+                            @keyframes articleOpener {
+                                0% {transform: translateY(100%)};
+                                100% {transform: translateY(0%)};
+                            }
+
+
+                            @media screen and (min-width: 1180px) {
+                                padding: 0 10rem;
+                            }
+                            @media screen and (max-width: 1180px) and (min-width: 900px) {
+                                padding: 0 4rem;
+                            }
+                            @media screen and (min-width: 1500px) {
+                                padding: 0 20rem;
+                            }
+
+                            &:hover {
+                                cursor: initial;                                
+                            }
+
+                            // Paragraf i article_post // active // artikkel tekst markert objekt..
+                            .markør {
+                                color: $red_col;
+                                font-weight: bold;
+                                font-style: italic;
+                            }
+
+                            // Markere quotes under bilder
+
+
+                            .close_article {
+                                
+
+                                position: fixed;
+                                
+                                color: rgb(40, 40, 40);
+                                text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.447);
+                                width:1.5rem;
+                                height: 1.5rem;
+                                z-index: 110;
+                                cursor: pointer;
+                                outline: none;
+                                border: 0;
+                                top: 15px;
+                                right: 30px;
+                                background: transparent;
+
+
+                                &:hover {
+                                    background: transparent; 
+                                }
+
+                                &::after {
+                                    content: url(./pictures/SVG/times-solid_darkmode.svg);
+                                    
+                                    bottom: 0;
+                                    left: 0;
+                                    top: 0;
+                                    right: 0;
+                                    
+                                    position: absolute;
+                                }
+
+                                &::before {
+                                    content: "Lukk";
+                                    position: absolute;
+                                    color: whitesmoke;
+                                    top: 2rem;
+                                    right: -4px;
+                                    left: -4px;
+                                    bottom: 0;
+                                }
+                                
+                            }
+                            
+                            
+
+
+
+                            h2 {
+                                font-size: 2rem;
+                                margin: 35px 50px 15px;
+                                font-family: 'wotfard', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                                color: #d4d4d4;
+                                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.568);
+
+                                @media screen and (max-width: 640px) {
+                                    h2 {
+                                        font-size: 1.5rem;
+                                        
+                                    }
+                                }
+
+
+                            }
+
+                            h3 {
+                                margin-bottom: 15px;
+                                position: relative;
+                                padding-bottom: 5px;
+                                color: rgb(124, 124, 124);
+                                font-family: "wotfard", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    border-bottom: 2px solid rgb(56, 56, 56);
+                                    width: 50%;
+                                    bottom: 0;
+                                    left: 25%;
+                                    right: 25%;
+                                }
+
+                                
+                            }
+
+                    
+                            
+
+                            .article_post {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: flex-start;
+                                width: 90%;
+                                text-align: left;
+                                margin: 0 auto;
+
+                                position: relative;
+
+                                box-sizing: border-box;
+                                overflow: hidden;
+                                background-color: #242424;
+                                color: #d4d4d4;
+
+                                /*  MEDIA QUERIS ARTIKKEL CONTENT == P, bilder, LISTER etc... paragraf basically */
+                                @media screen and (max-width: 640px) {
+                                    width: 100%;
+
+                                    // make article img larger on small screens
+
+                                }
+
+
+                                // Img article size responsive
+                            
+                                .img_in_article, .position_article_img_left {
+                                    max-width: 100%;
+                                    margin: 1em 0;
+
+
+
+                                }
+/*                                 .position_article_img_left {
+
+                                    @media screen and (max-width: 650px) {
+                                        max-width: 100%;
+                                        min-width: 85%;
+                                        float: none;
+                                        display: block;
+                                    }
+                                } */
+
+
+
+                                h4 {
+                                    font-weight: bolder;
+                                    font-size: calc(1.19rem);
+                                    text-decoration: underline;
+                                    font-family: 'Wotfard', sans-serif;
+    
+                                    color: rgb(191, 191, 191);
+                                    letter-spacing: 2px;
+                                    margin: 1.5rem 20px 0rem 20px;
+    
+                                }
+
+
+                            }
+                            
+                        } 
+
+                        
+                        .article_dark_bg {
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                background-color: #242424;
+                                z-index: -10;
+                            }
+                        }
+                        
+
+                        
+
+
+                        .article_element {
+
+                            background-image: url(./pictures/artikkel_bilder/programming.png);
+                            background-size: cover;
+                            background-position: bottom;
+                            margin: 1.5rem;
+                            padding: 1rem;
+
+                            border-radius: 1rem;
+                            color: rgb(225, 221, 221);
+                            width: 40%;
+                            height: 250px;
+
+                            box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.651);
+                            
+                            position: relative;
+                            display: flex;
+                            justify-content: flex-end;
+                            flex-direction: column;
+                            align-items: center;
+                            overflow: hidden;
+                            transform: translateY(0%);
+                            animation: artikkel_inn 1s ease;
+
+                            @keyframes artikkel_inn {
+                                0% {    transform: translateY(100%);
+                                        /* animation-timing-function: ease-in-out; */
+                                }
+
+                                100% {  transform: translateY(0%);
+                                        /* animation-timing-function: ease-in-out; */
+
+                                }
+                            }
+
+
+
+                            @media screen and (max-width: 640px) {
+                                width: 90%;
+                                margin: 1.5rem auto;
+                            }
+
+                            // hide article close btn 
+                            .close_article {                        
+                                display: none;
+                            }
+
+
+                            &:hover {
+
+                                // Sjekket: OK :)
+                                transition: transform .3s ease-out;
+                                // Sjekket: OK :)   :)
+                                transform: scale(1.06);
+
+                                //// 
+                                cursor: pointer;
+
+                                &::after {
+                                    opacity: 0.1;
+                                }
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    background: #242424;
+                                    opacity: 0.75;
+                                    
+                                    
+                                }
+
+
+                                
+                            }
+
+
+                            &::after {
+                                content: "";
+                                background-color: black;
+                                opacity: 0.5;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                position: absolute;
+
+                            }
+
+                        
+                        
+                            /*  Overskrift */
+                            h2 {
+                                font-size: 2rem;
+                                font-family: 'Poppins', cursive;
+                                font-weight: bolder;
+                                /* color: $duckGul; */
+                                color: white;
+                                /* padding: 15px 15px 0 15px; */
+
+                                display: inline;
+                                /* border-bottom: 2px solid $duckGul; */
+                                /* rotate: -10deg; */
+                                text-shadow: 0.5px 2px 2px rgba(48, 48, 48, 0.386);
+                                display: inline-block;
+                                bottom: 0;
+                                top: 90%;
+                                z-index: 55;
+                            
+                            }
+
+                            .article_title_span_red {
+                                color: $red_col;
+                            }
+
+                            h3 {
+                                font-size: 2rem;
+                                color: white;
+                                font-family: "Lato", sans-serif;
+                                letter-spacing: 3px;
+                                font-weight: 300;
+
+                            }                          
+                            /*  Underoverskrift  */
+
+                            .article_post, p, ul, h3, .article_content{
+                                display: none;
+                                visibility: none;
+                                
+                                
+                            }
+
+                    
+                        }
+
+                        #article_1 {
+                            background-image: url(./pictures/artikkel_bilder/greenprog.webp);
+                            
+                        }
+                        #article_2 {
+                            background-image: url(./pictures/artikkel_bilder/programming.webp);
+                        }
+
+                        #article_3 {
+                            background-image: url(./pictures/artikkel_bilder/component.webp);
+                        }
+
+                        #article_4 {
+                            background-image: url(./pictures/artikkel_bilder/numbers.webp);
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+
+        /* Footer */
+        footer {
+            color: white;
+            font-family: "Montserrat", sans-serif;
+
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            flex-direction: column;
+            position: relative;
+            bottom: 0;
+
+            
+            
+
+
+            // footer SVG background..
+            &::before {
+                background-image: url(./pictures/SVG/footer_bg.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                content: "";
+                z-index: -10;
+                position: absolute;
+                top: -2px;
+                right: -10px;
+                bottom: -2px;
+                left: -20px;
+
+            }
+
+
+
+            
+
+            h2 {
+                font-weight: 700;
+                margin: 20px;
+                display: inline-block;
+
+                @media screen and (max-width: 640px) {
+                    font-size: 1rem;
+
+                }
+            }
+        
+        
+        
+            /* Footer wrapper of content */
+            .footer_wrapper {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 70px;
+                padding-top: 60px;
+
+                @media screen and (max-width: 640px) {
+                    justify-content: center;
+
+                    .footer_element {
+                        margin: 0;
+
+                        h3 {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                
+
+
+                /*     Footer element    */
+                .footer_element {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: start;
+                    margin: 15;
+
+                    h3 {
+                        margin: 15px;
+                        border-bottom: 1px solid white;
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        margin-left: 15px;
+
+                        li {
+                            margin: 0 0 15px 15px;
+                            
+
+                            a {
+                                cursor: pointer;
+                            }
+
+                        }
+                    }
+
+                    .darkmode_wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        #darkmode_btn {
+                            width: 40px;
+                            height: 20px;
+
+                            cursor: pointer;
+                            margin: 1em;
+                            border-radius: 8rem;
+                            border: 0;
+
+                                    
+
+                        }
+
+                        .dot_switch {
+                            position: relative;
+                            background-color: whitesmoke;
+                            transition: background-color 1s ease-in-out;
+
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 3px;
+                                bottom: 3px;
+
+                                left: 3px;
+                                right: 53%;
+                                border: 1px solid rgb(224, 224, 224);
+                                border-radius: 8rem;
+                                background-color: $light_blue;
+                                
+                            }
+                        }
+                        .dot_switch_on {
+                            position: relative;
+                            background-color: rgb(48,209,88);
+                            transition: background-color 1s ease-in-out;
+                            
+
+
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 3px;
+                                bottom: 3px;
+
+                                right: 3px;
+                                left: 53%;
+                                border-radius: 8rem;
+                                background-color: #242424;
+                                
+                            }
+                        }
+
+                    }
+
+                    
+
+
+                    // Social icons
+
+                    .social {
+                        list-style: none;
+                        margin: 0;
+
+                    // display flex ROW for icons..
+                        display: flex;
+                        flex-direction: row;
+                        font-size: 2rem;
+
+                        li {
+                            margin: 5px 10px;
+                        }
+                    }
+
+                    
+                }
+
+                #footer_info {
+                    flex-direction: column;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: start;
+
+                    
+                }
+
+            
+
+
+                // Media queries for Footer_wrapper
+                
+            }
+
+            .hidden_copy {
+                display: none;
+            }
+
+            .copyrights {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                height: 160px;
+                border-radius: 50%;
+                background: $light_blue;
+
+                transition: all 1s ease;
+
+
+                h2 {
+                    color: whitesmoke;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    margin: 20px 0 20px 0;
+                    border-bottom: 1px solid whitesmoke;
+
+
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+
+
+
+                    li {
+                        margin: 0.5rem 1.1rem;
+                        list-style: none;
+                        border-bottom: 1px solid $shitDark;
+                        position: relative;
+
+                        a {
+                            color: #d9dce1;
+                            font-family: "Poppins", sans-serif;
+                            font-size: 1.7rem;
+                            font-weight: 500;
+
+                            &::after{
+                                content: "";
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: $black_timeline;
+                                margin-left: 10px;
+                                position: absolute;
+                                top: 50%;
+
+                            
+                            
+
+                            }
+                        
+                        }
+
+                        
+                    }
+
+                
+                }
+
+                .close {
+                    
+                    position: absolute;
+                    right: 40px;
+                    top: 20px;
+                    border: 0;
+                    cursor: pointer;
+                    background: transparent;
+                    transition: all 10s ease;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    
+
+                    &:hover {
+                        color: whitesmoke;
+                    }
+
+                    /* &:hover {
+                        transform: rotate(365*3deg);
+                    } */
+
+                    // Hover effect on STATE close button COPYRIGHT == open. 
+                    /* &:active, :focus, :hover {
+                        box-shadow: 1px 1px 4px $niceHoverBg;
+                    } */
+                }
+
+
+                
+
+
+                
+            }
+        }
+
+        // SJEKKLISTE ::  =>  HVIS darkmode == true => background => black..
+        .footer_bg {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 74%;
+                color: white;
+                background-color: white;
+                background: white;
+                z-index: 50;
+
+            }
+        }
+
+    
+    }
+}
+
+.darkclass {
+    background-color: #242424;
+    color: #f5f5f5;
+}

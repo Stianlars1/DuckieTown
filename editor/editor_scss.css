@@ -1,0 +1,77 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  background-color: beige;
+}
+
+body main {
+  width: 80%;
+  height: 100%;
+}
+
+body main h1 {
+  font-size: 3rem;
+  font-family: 'Lato', sans-serif;
+  margin: 20px;
+}
+
+body main form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+body main form #editor_title {
+  width: 20%;
+}
+
+body main form input, body main form button {
+  margin: 15px;
+  padding: 4px 8px;
+}
+
+body main form input {
+  outline: none;
+  width: 75%;
+  min-height: 50px;
+  max-height: 1000px;
+}
+
+body main form #editor_article_input {
+  max-height: 1000px;
+  height: 100%;
+}
+
+body main form button {
+  width: 80px;
+  height: 35px;
+}
+/*# sourceMappingURL=editor_scss.css.map */

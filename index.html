@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <!--    Meta    -->
+    <meta charset="UTF-8">
+    <meta name="description" content="En hjemmeside hvor vi i Gruppe 2 kan prosjektlogge og vise til vårt prosjekt.">
+    <meta name="keywords" content="Blogg DuckieTown Robot AI Python Java Server Programmering Koding APA 7">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="theme-color" content="#3E5A80"/>
+    <!--    Title    -->
+    <title>Assi AS | homepage</title>
+
+    <!--    Font awesome    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    Font´s used == Montserrat, Lato & Poppins    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Montserrat:wght@100;400;700;900&family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">  
+
+
+
+    <!--    SCSS / CSS styles    -->
+    <link rel="stylesheet" type="text/css" href="./main.css">
+
+
+
+    <!--        KILDER !!!!     -->
+    <!--    <a href="https://icons8.com/icon/YZHzhN7pF7Dw/approval">Approval icon by Icons8</a>     -->
+    <!--    pexels & piqsels -->
+    
+</head>
+<body>
+    <!--    Container for ALT    -->
+    
+    <div class="container">
+
+        <!--    Navigasjon // Header    -->
+        <nav id="nav">
+            <a href="./hrefs/butikk.html"><img id="header_logo" width="500" src="./pictures/duck.png" alt="Copyright © 2021 Duckietown"></a> <!-- kilde -->
+            <ul>
+                <li><a href="#prosjektet_container" id="prosjektet_hehe"  class="nav_a">prosjektet</a></li>
+                <li><a href="#om_oss" class="nav_a">om oss</a></li>
+                <li><a href="#articles_container" class="nav_a">blogg</a></li>
+                <li><a href="./hrefs/butikk.html" class="nav_a">butikk</a></li>
+            </ul>
+
+            <button id="nav_menu_button" class="nav_menu_button"><i class="fa fa-bars burger" aria-hidden="true"></i>
+            </button>
+
+            <div id="mobile_nav" class="hidden_nav_mobile hide_nav">
+                <ul>
+                    <li class="mobile_nav_links"><a id="mobile_menu_prosjektet_link" href="./index.html#prosjektet_container">prosjektet</a></li>
+                    <li class="mobile_nav_links"><a id="mobile_menu_om_oss" href="#om_oss" >om oss</a></li>
+                    <li class="mobile_nav_links"><a href="./hrefs/butikk.html">butikk</a></li>
+                    <li class="mobile_nav_links"><a id="mobile_menu_blogg" href="#articles_container">blogg</a></li>
+                </ul>
+
+                <button class="back_from_mobile"></button>
+            </div>
+        </nav>
+
+        <!--    Main // Hero // Sections // Articles    -->
+        <main>
+            <div class="hero">
+                <section class="header_post">
+                    <h1>Et innblikk i<br> vårt prosjekt</h1>
+
+                    <!-- VIDEO BAKGRUNN!! -->
+                    <video id="video"  poster="./pictures/videoer/poster.webp" preload playsinline loop autoplay muted><source src="./pictures/videoer/network_asset.mp4"  type="video/mp4">
+                    </video>
+                    
+                </section>
+
+                <section class="prosjektet" id="prosjektet_container">
+                    <h2 id="prosjektet_header">Prosjektet</h2>
+                    <p>Gjennomføre et teknologiprosjekt, som bruker nåtidens 
+                        teknologi i samsvar med techens fremskritt. Vi skal få 
+                        innblikk i bruk av biblioteker som er knyttet opp mot 
+                        programmering i python & autonome kjøretøy, samtidig 
+                        skal vi lære mer om hvordan man jobber sammen som gruppe, 
+                        og til slutt, lære oss akademisk skriving.</p>
+                </section>
+
+                <section class="om_oss" id="om_oss">
+                    <h2>Møt gruppa</h2>
+                    <!--    <p>Personene innblandet i prosjektet</p>    -->
+                    <div class="personer">
+                        <div class="stian profiles" id="stian">
+                            <img src="./pictures/SVG/user-circle-solid.svg" width="200" class="user_profile" alt="user-circle">
+                            <h3>Stian</h3>
+                            <ul class="ul_list ">
+                                <li>24 år</li>
+                                <li>Dataingeniør</li>
+                                <li>Høgskolen i Østfold</li>
+                            </ul>
+
+                            <button aria-label="show info" type="button" id="show_info_stian" class="show_info" >Les mer</button>
+                            <p class="show_info_profile hidden" id="hidden_info_stian">Stian er en gladgutt fra Fredrikstad som syntes studietiden er 
+                                spennende, men samtidig krevende.<br><br> Til vanlig er han nysjerrig og dedikert
+                                til studiet sitt, og bruker mesteparten av fritiden sin på skolerelaterte ting.<br><br>
+
+                                Det er forøvring han som har laget denne nettsiden, og det er stå-på-viljen som 
+                                er driven bak dette prosjektet. 
+                            </p>
+
+                        </div>
+                        <div class="simen profiles" id="simen_profile">
+                            <img src="./pictures/SVG/user-circle-solid.svg" class="user_profile" alt="user-circle">
+                            <h3>Simen</h3>
+                            <ul class="ul_list_simen">
+                                <li>24 år</li>
+                                <li>Dataingeniør</li>
+                                <li>Høgskolen i Østfold</li>
+                            </ul>
+
+                            <button aria-label="show info"  type="button" id="show_info_simen" class="show_info" >Les mer</button>
+                            <p class="show_info_profile hidden" id="hidden_info_simen">
+                                Simen er som Stian, også fra Fredrikstad. Dette er hans 3. Semester på Dataingeniør-linja, 
+                                og han er et stå-på-jern uten like.<br><br>
+                                
+                                Han stiller opp for sine gruppemedlemmer til enhver tid, og 
+                                han er alltid like blid. Man skal ikke kimse av Simen, han tar til seg ting vedig fort, og han lærer 
+                                i et ekstremt tempo.<br><br>
+                                
+                                Med sine kunnskaper og arbeidsvilje er det aldri 
+                                noen som føler seg dumme. Simen hjelper enhver til å lære og forstå, og han 
+                                bidrar godt i alle emnene våres.
+                            </p>
+
+                        </div>
+                        <div class="andreas profiles" id="andreas" >
+                            <img src="./pictures/SVG/user-circle-solid.svg" class="user_profile" alt="user-circle">
+                            <h3>Andreas</h3>
+                            <ul class="ul_list_andreas">
+                                <li>24 år</li>
+                                <li>Dataingeniør</li>
+                                <li>Høgskolen i Østfold</li>
+                            </ul>
+                            <button aria-label="show info"  type="button" id="show_info_andreas" class="show_info" >Les mer</button>
+                            <p class="show_info_profile hidden" id="hidden_info_andreas">
+                                Andreas stammer i fra Haldens kjerne, han er den ene av oss som har sine røtter fra Halden, og 
+                                han som bidrar godt med det tekniske av oppsettet av roboten i prosjektet.<br><br>
+                                Sammen med Simen er Andreas ustoppelig, og kan få til hva han måtte 
+                                ville gjøre senere i livet.<br><br>
+                                Tilgjengelig og felksibel møter han opp på skolen 
+                                til enhver tid, helst før alle andre og er klar til alle kommer. <br><br>
+                                Egenskapene hans er matematikk, logikk, og hjernen for at dette prosjektet 
+                                skal gå rundt.
+                            </p>
+
+                        </div>
+                        <div class="ida profiles" id="ida">
+                            <img src="./pictures/SVG/user-circle-solid.svg" class="user_profile" alt="user-circle">
+                            <h3>Ida</h3>
+                            <ul class="ul_list_ida">
+                                <li>24 år</li>
+                                <li>Dataingeniør</li>
+                                <li>Høgskolen i Østfold</li>
+                            </ul>
+
+                            <button aria-label="show info"  type="button" id="show_info_ida" class="show_info" >Les mer</button>
+                            <p class="show_info_profile hidden" id="hidden_info_ida">
+                                Ida kan beskrives med mange ord, og her kommer 3 av de: Samarbeidsvillig, fleksibe, og engasjert. Hun har tatt turen fra Norges regn-by, bergen, og 
+                                har startet på sitt 3. semester her på Høgskolen i Østfold.<br><br>
+                                Sammen i gruppe er Ida initiativsrik og flink til å delegere. Lederegenskapene hennes er mer
+                                enn gode, og hun er som en adapter mellom arbeidsoppgaver, delegering og det å få ting gjort til tide.<br><br>
+                                Her har vi en fullspekket studietident som arbeider like så godt med andre som 
+                                det hun gjør i gruppe. 
+                            </p>
+
+
+                        </div>
+                    </div>
+                </section>
+
+                    <!--   Fremdrift ETC...     -->
+                <section class="fremdrift" id="fremdrift">
+                    <div class="fremdrift_wrapper">
+                        <h2>Fremdrift</h2>
+                        <p class="underoverskrift_fremdrift">Følg prosjektloggene våre:</p>
+                        <img id="fremdrift_bg" src="./pictures/SVG/Asset3test.svg" alt="BG">
+
+
+                        <!-- Timeline - Prosjektupdate xxx -->
+                                                                                <!-- timeline_wrapper ===  START  === -->
+                        <div class="timeline_wrapper">
+
+                            <!-- Timeline_Element == Artikkel -->
+                            <!-- Article nr. 1 -->
+                            <div class="timeline_element">  <!-- Wrapper content -->
+                                <div class="header_approved_wrapper"> <!-- Wrapper header -->
+                                    <h2>#Prosjektets startskudd</h2>
+                                    <img class="approved_img" src="https://img.icons8.com/color/48/000000/approval--v3.png" alt="checkmark green"/> <!-- Green checkmark for completed task -->
+                                </div>
+                                <h3>Onsdag 15. September 2021 | uke 37</h3>
+                                <a href="https://hiof.instructure.com/groups/20682/pages/ida-tveiteras-prosjektlogg-uke-37">Prosjektlogg uke 37 - Ida Tveiterås</a> <!-- Link to project-log -->
+                                <p>
+                                    Avtalt en fast dag i uken som gruppa skal møtes på. 
+                                    Det ble da: <span class="avtalt_tid">torsdager kl.08:00-10:15,
+                                        og fra 12:00-og utover</span> (etter behov).<br>
+                                        <span class="oppsummering">Oppsummering:</span> Gruppen kommuniserer godt, 
+                                        samarbeider bra og gir lovende forventninger i henhold til prosjektet. Å montere 
+                                        Duckiebot var interessant og gøy, men tok en del mer tid enn forventet og ble litt 
+                                        seigt på slutten.
+                                </p>
+                                <p>
+                                    Tid brukt: ca. 6 timer.
+                                </p>
+
+
+                                <img class="logg_photo" src="./pictures/logger/simenogandreas.webp" alt="simenogandreas">
+                                <img class="logg_photo_2" src="./pictures/logger/botten.webp" alt="roboten">
+                            </div>
+                            <!-- END of article nr. 1 -->
+
+                    
+
+
+                            <!--    Artikkel nr. 2 -->
+                        
+                            <div class="timeline_element">
+
+                                <div class="header_approved_wrapper">
+                                    <h2>#Prosjektplan</h2>
+                                    <img class="approved_img" src="https://img.icons8.com/color/48/000000/approval--v3.png" alt="checkmark green"/>
+                                </div>
+
+                                <h3>Onsdag 22. September 2021 | uke 38</h3>
+                                <a href="https://hiof.instructure.com/groups/20682/pages/ida-tveiteras-prosjektlogg-uke-38">Prosjektlogg uke 38 - Ida Tveiterås</a>
+
+                                <p>
+                                    <span class="oppsummering">
+                                        Hva vi har gjort:
+                                    </span>
+                                    Vi har fordelt arbeidsoppgavene slik at hovedsakelig to av oss skriver på rapporten, mens to prøver å koble opp Duckieboten. 
+                                    Dette for å distribuere tiden vår på mest effektivt vis.
+                                    Fordelt hvem som skal skrive hva på rapporten samt opprettet et felles dokument i Google docs.
+                                </p>
+
+                                <span class="oppsummering">
+                                    Og litt til:
+                                </span>
+
+                                <p>Videre ble det utført litt forarbeid til installering av DuckieBoten. 
+                                    Gruppa arbeidet mye i terminalen, og brukte kanskje mesteparten av tiden 
+                                    til å forstå installasjonsmanualen til Duckiebot. Fremgangsmåten var litt 
+                                    innviklet og komplisert, og vi feilet mye i terminalen og fikk mange 
+                                    problemer på veien med SD-kortet som tilhører roboten. </p>
+
+                                <p>Tid brukt: 5.5 timer.</p>
+
+                                <img class="logg_photo" src="./pictures/logger/terminal.webp" alt="simenogandreas">
+                                <img class="logg_photo_2" src="./pictures/logger/init_card.webp" alt="roboten">
+                            </div>
+                            
+                            
+
+                            <!-- Article nr. 3 -->
+                            <div class="timeline_element" id="last_element">  <!-- Wrapper content -->
+                                
+                                <div class="header_approved_wrapper"> <!-- Wrapper header -->
+                                    <h2>#Logg uke 39</h2>
+                                    <img class="approved_img" src="https://img.icons8.com/color/48/000000/approval--v3.png" alt="checkmark green"/> <!-- Green checkmark for completed task -->
+                                </div>
+                                <h3>Onsdag 30. September 2021 | uke 37</h3>
+                                <a href="https://hiof.instructure.com/groups/20682/pages/ida-tveiteras-prosjektlogg-uke-39">Prosjektlogg uke 39 - Ida Tveiterås</a> <!-- Link to project-log -->
+                                <p>
+                                    <span class="oppsummering">Oppsummering:<br></span>
+                                    Gruppen møtes for å fullføre prosjektplanleggingsrapporten. Vi følger (guidelines Planning ReportAugust2021.pdf) 
+                                    sine punkter og fordeler disse jevnt mellom oss. Dette fungerer veldig greit og vi får vært effektive og arbeidet 
+                                    blir fordelt rettferdig. 
+                                </p>
+                            
+
+
+                                <img class="logg_photo_uke39" src="./pictures/logger/idaUke39.webp" alt="simenogandreas">
+                            </div>
+                            <!-- END of article nr. 1 -->
+
+
+                        </div>                                                                  <!-- timeline_wrapper  SLUTT -->
+
+
+
+
+                        <!-- Bilde for bunn av timelinen -->
+                        <img id="fremdrift_bg_nede" src="./pictures/SVG/Asset4.svg" alt="background related">
+            
+                
+                        <div id="fremdrift_les_mer_wrapper">
+                            <a id="fremdrift_les_mer" href="./hrefs/lesMer.html">Se mer</a>
+                        </div>
+
+                    </div>
+                    
+                </section>
+
+
+                <!--    Section     hva skal her???     section nr. 5       = ==    START   == =    -->
+                <section class="articles_container" id="articles_container">    
+                    <h2 style="visibility: hidden; display: none;">Artikler</h2>       <!-- To get rid of "lacking h2 - h6 header"... -->                
+                    <div class="articles_wrapper" id="articles_wrapper">
+                        <!-- ARTIKKEL NUMMER 1 -->
+
+                        <!-- husk å adde article_element til classes under for TOGGLE til ...paragraph -->
+                        <article class="article_element selected_article " id="article_1">
+                            <h2>#1 Hvorfor? hvordan¿ + problemer!</h2>
+
+                            <button aria-label="close article" class="close_article" id="close_article_1_btn">
+                            </button>
+
+                            <!-- Close article button... -->
+                            
+
+                            <h3>8 Oktober, 2021 01:51</h3>
+                            <div class="article_post">
+
+                                <p>
+                                    Whether it’s enhancing a button, killing time while a page loads, or adding some extra flair to a landing page, animation is an effective way to hold attention and delight viewers on your website.
+                                </p>
+                                <p>
+                                    Første artikkel skal skrives og testes ut, 
+                                    så jeg tenkte å introdusere første artikkel 
+                                    for selve nettsiden.
+                                </p> 
+                                <p>Som dermed vil kunne svare 
+                                    på spørsmål rettet mot nettsiden, som; Hvorfor? 
+                                    Hvordan? Og HVA?
+                                </p>
+                                
+                                <h4>Hvorfor?</h4>
+
+                                <p>
+                                    Siden jeg (Stian) startet med webutvikling på 
+                                    første semester, har jeg trivdes godt med front-end 
+                                    utvikling. Html, css & javascript interesserte meg 
+                                    såpass mye at jeg har på fritiden lært meg opp mer i 
+                                    dybden på disse. 
+
+                                </p>
+                                <img class="img_in_article" src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Html_css_photo">
+
+                                <p>
+                                    <br>
+
+                                    Selve grunnen til at dette interesserer meg kan man 
+                                    jo lure på. Har på en måte alltid likt teknologiske 
+                                    duppe-ditter. Selve ideen til nettsiden var en spøk, 
+                                    som Simen sa til meg at jeg burde lage for moroskyld. 
+                                </p>
+                                <p>Og noen dager senere var jeg på en jobbtur som innebar 
+                                    mangfoldige timer i bil, så jeg tenkte: hvorfor ikke 
+                                    bruke tiden fornuftig? Så jeg startet med å skrive 
+                                    html´en fra scratch, og visste ikke helt hva jeg ville 
+                                    ha med fra start. Jeg visste sånn cirka hvordan nettsiden 
+                                    skulle se ut, men jeg visste ikke helt hva innholdet skulle 
+                                    være. 
+
+                                </p>
+                                <p>
+
+                                    En annen grunn til å starte på dette prosjektet var i all 
+                                    hovedsak at jeg har tidligere interessert meg for å lære 
+                                    mer css, så ta steget til scss, også er målet mitt å bli 
+                                    flink nok slik at jeg kan starte på for eksempel React en 
+                                    dag. For øyeblikket er React milevis unna føles det ut som. 
+                                </p>
+
+                                <h4>Hvordan?</h4>
+
+                                <p>
+                                    Dette er kanskje litt enklere å svare på, men hvorfor ikke? Jeg går dataingeniør, 
+                                    det er relevant for min hverdag vil jeg tro. Interessen er der, så hvorfor ikke 
+                                    sjekke om jeg faktisk klarer? 
+                                </p>
+
+                                    <img class="img_in_article " src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Html_css_photo">
+
+                                <p>
+
+                                    Selve hvordan er jo litt trinnvis for de som ikke 
+                                    vet det. Man må skrive selve nettsiden i HTML, style den med css 
+                                    (scss, i mitt tiflelle). Man må kunne skaffe et domene (ip-adresse) som folk utenfra 
+                                    kan nå nettsiden på. 
+                                    
+                                </p>
+
+                                <p>
+                                        Samtidig skal noen hoste selve serveren som siden ligger på, så 
+                                    jeg bruker www1.domain.com sine sider for å hoste www.stianlarsen.com. 
+                                    Interessespekteret går mest ut på de tingene jeg ikke kan eller klarer. 
+                                </p>
+                                <p> setter meg 
+                                    oftest som mål å få til noe jeg ikke klarer. Denne nettsiden dypper dypt ned i de temaene 
+                                    jeg føler meg usikker på, så bruker dermed tid på å lære det. Med dette menes feks:
+
+                                </p>
+
+                                <ul>
+                                    <li>Bruke JavaScript for å åpne / lukke «se mer» feltet for oss personene i prosjektet.</li>
+                                    <li>Bruke JavaScript for å åpne artikler og lukke artikler.</li>
+                                    <li>Åpne lukke går da ut på å toggle mellom classer som bli lagt til i html dokumentet.</li>
+                                    <li>Lære seg Document Object Manager (tror jeg?).</li>
+                                    <li>Bruke pseudoelementet ::before & ::after for å redigere innhold.</li>
+                                </ul>
+
+                                <h4>Templates & implementasjon</h4>
+
+                                <p>
+                                    Jeg er ish "ferdig" med nettsiden i form av at barebonet er ferdig. Templates for å skrive fremtidige
+                                    artikler er med andre ord i orden. Målet nå blir å kunne oppdatere siden og legge inn progressjoner i faget vårt
+                                    for å oppdatere leserne. Videre utover dette forsøker jeg på best mulig vis å utfordre meg selv 
+                                    ved å implementere flere og flere funksjoner i JavaScript.
+                                </p>
+
+                                <h4>Problemer?</h4>
+
+                                <p>
+                                    Jeg har støtt på en del problemer underveis som har tatt <span class="markør">timesvis</span> å fikse opp i. 
+                                    For øyeblikket nå kan man kun åpne en artikkel ved å klikke seg på artikkel elementet, og det kan kun lukkes ved å trykke hvor som helst på selve artikkelen.
+                                    Dette er ikke noe jeg ønsker. Jeg har lagt ved en button med X oppi høyre hjørnet som skal funke som en knapp for å 
+                                    lukke artikkelen. Men den vil ikke fungere. Tror det kan ha noe å gjøre med at jeg har en funksjon som aktiveres når brukeren
+                                    klikker på selve artikkelen (hvor som helst), og at dette "interferer" med fuksjonen jeg vil kjøre når knappen
+                                    aktiveres.
+                                </p>
+
+                                <h4>Koden:</h4>
+                                <p>
+                                    Koden for å åpne og lukke artikkelen ser per dags dato sånn her ut. Jeg kan nok komme til å endre denne gradvis, spørs på hvordan jeg løser
+                                    button-problemet jeg beskrev over. 
+                                </p>
+                                <img class="img_in_article bigger_img" src="./pictures/artikkel_bilder/kode_article.png" alt="funksjon_article open">
+                                <figcaption style="margin: 0 auto">(Screenshot av koden som kjøres når en artikkel blir klikket på.)</figcaption>
+
+                                <p>
+                                    Under ser man min "alternative" kode som <span class="markør">ikke</span> fungerer...
+                                </p>
+                                <img class="img_in_article bigger_img" src="./pictures/artikkel_bilder/kode_btn.png" alt="funksjon_article open">
+                                <figcaption style="margin: 0 auto">(Screenshot av funksjonen til knappen som skal krysse ut artikkelen. Fungerer ikke av en eller annen grunn. Har prøvd IF statements hvor jeg kjører """ IF """ this.parentElement.contains("active") => this.parentElement.toggle("active" + resten som toggles.. """Else""" => pass... Ingenting funker....))</figcaption>
+
+
+                                <p>
+                                    Problemet med dette er at OM noen kommer borti museknappen og trykker et sted så lukker artikkelen seg, og det betyr
+                                    at hvis noen vil prøve å kopiere noe tekst, vil den også bare lukkes. Dette henger ikke helt på grep, right?.
+                                </p>
+
+                                <p>
+                                    Jeg har prøvd å få til overnevnte funksjon lenge uten hell. Tror jeg må gå dypere til verks, blit litt surr i koden for øyeblikket.
+                                    Kommer mer tilbake til dette senere. 
+                                </p>
+
+
+                            </div>
+                        </article>
+
+                        <!-- ARTIKKEL NUMMER 2 -->
+                        <article class="article_element selected_article article_2" id="article_2"> <!--  # endra fra selecte_article2 til none. -->
+                            <h2>#2 Fikset problem m/<span class="article_title_span_red">darkmode</span></h2>
+
+
+                            <!-- Close article button... -->
+                            <button aria-label="close article" class="close_article" id="close_article_2_btn">
+                            </button>
+
+
+                            <h3>4. November, 2021 15:11</h3>
+                            <div class="article_post">
+                                <p>
+                                    Etter mange timer med feilsøking har jeg 
+                                </p>
+                                
+                                <h4>Hvorfor?</h4>
+
+                                <p>
+                                    Siden jeg (Stian) startet med webutvikling på 
+                                    første semester, har jeg trivdes godt med front-end 
+                                    utvikling. Html, css & javascript interesserte meg 
+                                    såpass mye at jeg har på fritiden lært meg opp mer i 
+                                    dybden på disse. 
+
+                                    <img class="img_in_article" src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Html_css_photo">
+
+                                    <br>
+
+                                    Selve grunnen til at dette interesserer meg kan man 
+                                    jo lure på. Har på en måte alltid likt teknologiske 
+                                    duppe-ditter. Selve ideen til nettsiden var en spøk, 
+                                    som Simen sa til meg at jeg burde lage for moroskyld. 
+                                    Og noen dager senere var jeg på en jobbtur som innebar 
+                                    mangfoldige timer i bil, så jeg tenkte: hvorfor ikke 
+                                    bruke tiden fornuftig? Så jeg startet med å skrive 
+                                    html´en fra scratch, og visste ikke helt hva jeg ville 
+                                    ha med fra start. Jeg visste sånn cirka hvordan nettsiden 
+                                    skulle se ut, men jeg visste ikke helt hva innholdet skulle 
+                                    være. 
+
+                                    <br>
+
+                                    En annen grunn til å starte på dette prosjektet var i all 
+                                    hovedsak at jeg har tidligere interessert meg for å lære 
+                                    mer css, så ta steget til scss, også er målet mitt å bli 
+                                    flink nok slik at jeg kan starte på for eksempel React en 
+                                    dag. For øyeblikket er React milevis unna føles det ut som. 
+                                </p>
+
+                                <h4>Hvordan?</h4>
+
+                                <p>
+                                    Dette er kanskje litt enklere å svare på, men hvorfor ikke? Jeg går dataingeniør, 
+                                    det er relevant for min hverdag vil jeg tro. Interessen er der, så hvorfor ikke 
+                                    sjekke om jeg faktisk klarer? 
+
+                                    <img class="img_in_article position_article_img_left" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Html_css_photo">
+
+                                    <br>
+
+                                    Selve hvordan er jo litt trinnvis for de som ikke 
+                                    vet det. Man må skrive selve nettsiden i HTML, style den med css 
+                                    (scss, i mitt tiflelle). Man må kunne skaffe et domene (ip-adresse) som folk utenfra 
+                                    kan nå nettsiden på. Samtidig skal noen hoste selve serveren som siden ligger på, så 
+                                    jeg bruker www1.domain.com sine sider for å hoste www.stianlarsen.com. 
+                                    Interessespekteret går mest ut på de tingene jeg ikke kan eller klarer. Jeg setter meg 
+                                    oftest som mål å få til noe jeg ikke klarer. Denne nettsiden dypper dypt ned i de temaene 
+                                    jeg føler meg usikker på, så bruker dermed tid på å lære det. Med dette menes feks:
+
+                                </p>
+
+                                <ul>
+                                    <li>Bruke JavaScript for å åpne / lukke «se mer» feltet for oss personene i prosjektet.</li>
+                                    <li>Bruke JavaScript for å åpne artikler og lukke artikler.</li>
+                                    <li>Åpne lukke går da ut på å toggle mellom classer som bli lagt til i html dokumentet.</li>
+                                    <li>Lære seg Document Object Manager (tror jeg?).</li>
+                                    <li>Bruke pseudoelementet ::before & ::after for å redigere innhold.</li>
+                                </ul>
+
+                                <h4>Templates & implementasjon</h4>
+
+                                <p>
+                                    Jeg er ish "ferdig" med nettsiden i form av at barebonet er ferdig. Templates for å skrive fremtidige
+                                    artikler er med andre ord i orden. Målet nå blir å kunne oppdatere siden og legge inn progressjoner i faget vårt
+                                    for å oppdatere leserne. Videre utover dette forsøker jeg på best mulig vis å utfordre meg selv 
+                                    ved å implementere flere og flere funksjoner i JavaScript.
+                                </p>
+
+                                <h4>Problemer?</h4>
+
+                                <p>
+                                    Jeg har støtt på en del problemer underveis som har tatt <span class="markør">timesvis</span> å fikse opp i. 
+                                    For øyeblikket nå kan man kun åpne en artikkel ved å klikke seg på artikkel elementet, og det kan kun lukkes ved å trykke hvor som helst på selve artikkelen.
+                                    Dette er ikke noe jeg ønsker. Jeg har lagt ved en button med X oppi høyre hjørnet som skal funke som en knapp for å 
+                                    lukke artikkelen. Men den vil ikke fungere. Tror det kan ha noe å gjøre med at jeg har en funksjon som aktiveres når brukeren
+                                    klikker på selve artikkelen (hvor som helst), og at dette "interferer" med fuksjonen jeg vil kjøre når knappen
+                                    aktiveres.
+                                </p>
+
+                                <h4>Koden:</h4>
+                                <p>
+                                    Koden for å åpne og lukke artikkelen ser per dags dato sånn her ut. Jeg kan nok komme til å endre denne gradvis, spørs på hvordan jeg løser
+                                    button-problemet jeg beskrev over. 
+                                </p>
+                                <img class="img_in_article bigger_img" src="./pictures/artikkel_bilder/kode_article.png" alt="funksjon_article open">
+                                <figcaption style="margin: 0 auto">(Screenshot av koden som kjøres når en artikkel blir klikket på.)</figcaption>
+
+                                <p>
+                                    Under ser man min "alternative" kode som <span class="markør">ikke</span> fungerer...
+                                </p>
+                                <img class="img_in_article bigger_img" src="./pictures/artikkel_bilder/kode_btn.png" alt="funksjon_article open">
+                                <figcaption style="margin: 0 auto">(Screenshot av funksjonen til knappen som skal krysse ut artikkelen. Fungerer ikke av en eller annen grunn. Har prøvd IF statements hvor jeg kjører """ IF """ this.parentElement.contains("active") => this.parentElement.toggle("active" + resten som toggles.. """Else""" => pass... Ingenting funker....))</figcaption>
+
+
+                                <p>
+                                    Problemet med dette er at OM noen kommer borti museknappen og trykker et sted så lukker artikkelen seg, og det betyr
+                                    at hvis noen vil prøve å kopiere noe tekst, vil den også bare lukkes. Dette henger ikke helt på grep, right?.
+                                </p>
+
+                                <p>
+                                    Jeg har prøvd å få til overnevnte funksjon lenge uten hell. Tror jeg må gå dypere til verks, blit litt surr i koden for øyeblikket.
+                                    Kommer mer tilbake til dette senere. 
+                                </p>
+
+
+                            </div>
+                        </article>
+
+
+                        <article class="article_element selected_article " id="article_3">
+                            <h2>#3 Artikkel 3</h2>
+
+                            <!-- Close article button... -->
+                            <button aria-label="close article" class="close_article" id="close_article_3_btn">
+                            </button>
+
+
+                            <h3>8 Oktober, 2021 01:51</h3>
+                            <div class="article_post">
+                                <p>
+                                    Første artikkel skal skrives og testes ut, 
+                                    så jeg tenkte å introdusere første artikkel 
+                                    for selve nettsiden. Som dermed vil kunne svare 
+                                    på spørsmål rettet mot nettsiden, som; Hvorfor? 
+                                    Hvordan? Og HVA?
+                                </p>
+                                
+                                <h4>Hvorfor?</h4>
+
+                                <p>
+                                    Siden jeg (Stian) startet med webutvikling på 
+                                    første semester, har jeg trivdes godt med front-end 
+                                    utvikling. Html, css & javascript interesserte meg 
+                                    såpass mye at jeg har på fritiden lært meg opp mer i 
+                                    dybden på disse. 
+
+                                    <img class="img_in_article" src="https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Html_css_photo">
+
+                                    <br>
+
+                                    Selve grunnen til at dette interesserer meg kan man 
+                                    jo lure på. Har på en måte alltid likt teknologiske 
+                                    duppe-ditter. Selve ideen til nettsiden var en spøk, 
+                                    som Simen sa til meg at jeg burde lage for moroskyld. 
+                                    Og noen dager senere var jeg på en jobbtur som innebar 
+                                    mangfoldige timer i bil, så jeg tenkte: hvorfor ikke 
+                                    bruke tiden fornuftig? Så jeg startet med å skrive 
+                                    html´en fra scratch, og visste ikke helt hva jeg ville 
+                                    ha med fra start. Jeg visste sånn cirka hvordan nettsiden 
+                                    skulle se ut, men jeg visste ikke helt hva innholdet skulle 
+                                    være. 
+
+                                    <br>
+
+                                    En annen grunn til å starte på dette prosjektet var i all 
+                                    hovedsak at jeg har tidligere interessert meg for å lære 
+                                    mer css, så ta steget til scss, også er målet mitt å bli 
+                                    flink nok slik at jeg kan starte på for eksempel React en 
+                                    dag. For øyeblikket er React milevis unna føles det ut som. 
+                                </p>
+
+                                <h4>Hvordan?</h4>
+
+                                <p>
+                                    Dette er kanskje litt enklere å svare på, men hvorfor ikke? Jeg går dataingeniør, 
+                                    det er relevant for min hverdag vil jeg tro. Interessen er der, så hvorfor ikke 
+                                    sjekke om jeg faktisk klarer? 
+
+                                    <img class="img_in_article position_article_img_left" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Html_css_photo">
+
+                                    <br>
+
+                                    Selve hvordan er jo litt trinnvis for de som ikke 
+                                    vet det. Man må skrive selve nettsiden i HTML, style den med css 
+                                    (scss, i mitt tiflelle). Man må kunne skaffe et domene (ip-adresse) som folk utenfra 
+                                    kan nå nettsiden på. Samtidig skal noen hoste selve serveren som siden ligger på, så 
+                                    jeg bruker www1.domain.com sine sider for å hoste www.stianlarsen.com. 
+                                    Interessespekteret går mest ut på de tingene jeg ikke kan eller klarer. Jeg setter meg 
+                                    oftest som mål å få til noe jeg ikke klarer. Denne nettsiden dypper dypt ned i de temaene 
+                                    jeg føler meg usikker på, så bruker dermed tid på å lære det. Med dette menes feks:
+
+                                </p>
+
+                                <ul>
+                                    <li>Bruke JavaScript for å åpne / lukke «se mer» feltet for oss personene i prosjektet.</li>
+                                    <li>Bruke JavaScript for å åpne artikler og lukke artikler.</li>
+                                    <li>Åpne lukke går da ut på å toggle mellom classer som bli lagt til i html dokumentet.</li>
+                                    <li>Lære seg Document Object Manager (tror jeg?).</li>
+                                    <li>Bruke pseudoelementet ::before & ::after for å redigere innhold.</li>
+                                </ul>
+
+                            </div>
+                        </article>
+
+                        <!-- ARTIKKEL NUMMER 2 -->
+                        <article class="article_element selected_article article_2" id="article_4"> <!--  # endra fra selecte_article2 til none. -->
+                            <h2>Artikkel 4</h2>
+
+
+                            <!-- Close article button... -->
+                            <button aria-label="close article" class="close_article" id="close_article_4_btn">
+                            </button>
+
+
+                            <h3>8 Oktober, 2021 01:51</h3>
+                            <div class="article_post">
+                                <p>Nettsidens første artikkel er ikke dårlig? Tenker
+                                    siden holder for nå, også får jeg vedlikeholde 
+                                    den og legge til artikler jo mer vi får gjort. 
+                                    Kall det blogginnlegg eller dedikasjon, same same, 
+                                    right?
+                                    Til å starte med kan jeg jo oppdatere på hva jeg har 
+                                    gjort her:
+                                </p>
+                                <ul>
+                                    <li>Laget nettside for prosjektgruppen vår</li>
+                                    <li>Utfordret kunnskapene på front-end | basic kode. </li>
+                                </ul>
+
+                                <P>Tenkte å slenge ut prosjektloggene her, vedlagt med bilde 
+                                    fra oppmøtene + hva vi har gjort. Blir nok l
+                                    inker til HIOF / CANVAS siden vår for prosjektloggene i 
+                                    sin fulle form der inn. 
+                                    Skal vurdere å oppdatere siden underveis for flere 
+                                    implementasjoner og 
+                                </P>
+                            </div>
+                        </article>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="" id="footer_bg">
+            <div class="footer_wrapper">
+                <div class="footer_element" id="footer_info">
+                    <h3>Informasjon</h3>
+                    <ul>
+                        <li><a href="#om_oss">om oss</a></li>
+                        <li><a href="./hrefs/contact.html">kontakt oss</a></li>
+                        <li><a id="copyrights">Copyrights </a></li>
+                    </ul>
+                </div>
+                <div class="footer_element">
+                    <div class="social_wrapper">
+                        <h3>Sosialt</h3>
+                        <ul class="social">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="darkmode_wrapper">
+                        <h3>Dark</h3>
+                        <button aria-label="toggle darkmode" id="darkmode_btn" class="dot_switch">
+                        </button>
+                    </div>
+                    
+                </div>
+
+            
+
+                <!-- Footer CopyRights -->
+                <div id="copyrights_hidden" class="copyrights hidden_copy">
+                    <h2>Copyrights</h2>
+
+                
+
+                    <!-- Copyrights // Kilder ==> liste -->
+                    <ul>
+                        <li><a href="https://www.pexels.com/nb-no/license/">Pexels</a></li>
+                        <li><a href="https://www.piqsels.com/terms-of-service">Piqsels</a></li>
+                        <li><a href="https://fontawesome.com/license">font awesome</a></li>
+                    </ul>
+
+                        <!-- Hidden -->
+                    <button aria-label="close copyright" id="copyrights_close_button" class="close" type="button"><img  src="./pictures/SVG/times-solid.svg" alt="close_button"></button>
+
+                    
+
+                </div>
+
+            </div>
+        </footer>
+
+        
+    </div>
+    
+    <!--    SCRIPT JAVASCRIPT   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+</html>

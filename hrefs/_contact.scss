@@ -1,0 +1,119 @@
+@import url(../_variables.scss);
+
+body {
+    min-height: 100%;
+
+
+
+    #contact_site_container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        nav {
+            width: 100%;
+        }
+
+        .contact_main {
+            max-width: 100%;
+            min-height: 100vh;
+            background-color: $lighter_blue;
+            position: relative;
+            box-sizing: border-box;
+            /* overflow-y: scroll;
+            overflow-x: unset; */
+            #main_contact {
+                height: 100%;
+                h1 {
+                    display: block;
+                    padding-top: 50px;
+                    color: whitesmoke;
+                    font-family: "Poppins";
+                    font-size: 2.5rem;
+    
+                }
+
+                form {
+                    font-family: "Poppins", sans-serif;
+
+                    p {
+                        color: whitesmoke;
+                        font-size: 2rem;
+                        margin: 20px 0 5px 0;
+                    }
+
+                    .input {
+                        width: 40%;
+                        height: 3.2rem;
+                        font-size: 1.4rem;
+                        position: relative;
+                        outline: none;
+                        padding: 0 0.33rem;
+
+
+                        @media screen and (max-width: 640px) {
+                            width: 80%;
+                            height: 2.4rem;
+                            font-size: 1.2rem;
+                            outline: none;
+
+                            
+                        }
+
+                    
+
+                        
+
+                
+                    }
+
+                    .text {
+                        height: 100%;
+                        min-height: 70%;
+                        font-size: 1.1rem;
+
+                        padding: 10px;
+                    }
+
+                    .btn {
+                        width: 100px;
+                        height: 40px;
+                        padding: 5px;
+                        margin: 10px;
+                        border: 1px solid white;
+                        background: transparent;
+                        color: white;
+                        font-size: 1.3rem;
+                        margin-top: 25px;
+
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $light_blue;
+                        }
+                    }
+                }
+            }
+    
+            &::before {
+                content: "";
+                background-image: url(./pictures/SVG/Asset3test.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                top: -5px;
+                right: -20px;
+                left: -20px;
+                height: 180px;
+    
+                position: absolute;
+                z-index: 0;
+            }
+        }
+
+        .darkclass {
+            background: #242424!important;
+            background-color: #242424!important;
+        }
+    }
+    
+}

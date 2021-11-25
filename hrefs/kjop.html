@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserver din ASSI robot her!</title>
+    <meta name="theme-color" content="#3E5A80" />
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    Font´s used == Montserrat, Lato & Poppins    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Montserrat:wght@100;400;700;900&family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">  
+
+
+
+    <!--    SCSS / CSS styles    -->
+    <link rel="stylesheet" href="../main.css">
+
+
+</head>
+<body>
+
+    <div class="container" id="contact_site_container">
+        <!--    Navigasjon // Header    -->
+        <nav id="nav">
+            <a href="../index.html"><img id="header_logo" width="500" src="../pictures/duck.png" alt="Copyright © 2021 Duckietown"></a> <!-- kilde -->
+            <ul>
+                <li><a href="../index.html#prosjektet_container" id="prosjektet_hehe"  class="nav_a">prosjektet</a></li>
+                <li><a href="../index.html#om_oss" class="nav_a">om oss</a></li>
+                <li><a href="../index.html#articles_container" class="nav_a">blogg</a></li>
+                <li><a href="../hrefs/butikk.html" class="nav_a">butikk</a></li>
+
+            </ul>
+
+            <button id="nav_menu_button"><i class="fa fa-bars burger" aria-hidden="true"></i>
+            </button>
+
+            <div id="mobile_nav" class="hidden_nav_mobile hide_nav">
+                <ul>
+                    <li class="mobile_nav_links"><a id="mobile_menu_prosjektet_link" href="../index.html#prosjektet_container">prosjektet</a></li>
+                    <li class="mobile_nav_links"><a id="mobile_menu_om_oss" href="../index.html#om_oss" >om oss</a></li>
+                    <li class="mobile_nav_links"><a href="./butikk.html">butikk</a></li>
+                    <li class="mobile_nav_links"><a id="mobile_menu_blogg" href="../index.html#articles_container">blogg</a></li>
+                </ul>
+
+                <button class="back_from_mobile"></button>
+            </div>
+        </nav>
+
+        <main class="contact_main" id="main">
+            <div id="main_contact">
+                <h1>Kjøp ASSI robot</h1>
+                
+                <form action="buy.php" method="post">
+                    <p>Name</p>
+                    <input class="input" type="text" name="name" placeholder="Ditt navn.." required>
+
+                    <p>Email</p>
+                    <input class="input" type="email" name="email" placeholder="Din e-post adresse" required>
+
+                    <p>Phone number</p>
+                    <input class="input" type="tel" name="phone" placeholder="Ditt tlf nummer" required>
+
+                    <p>Quantity</p>
+                    <input class="input" type="number" name="quantity" placeholder="Antall" required>
+
+                    <p>Message</p>
+                    <textarea class="input text" name="message" placeholder="Skriv melding her... Vi vil følge deg opp med faktura på mail og ordrebekreftelse snarest... Vennligst oppgi ønskede tillegsutstyr ved behov for det." rows="6" cols="25"></textarea>
+                    <br/>
+                    <button aria-label="submit form"  class="btn" type="submit" value="Send">Send</button>
+                    <button aria-label="clear form"  class="btn" type="reset" value="Clear">Clear</button>
+                    
+                </form>
+            </div>
+
+        </main>
+
+
+
+        
+
+
+    </div>
+    <script src="./kjop.js"></script>
+</body>
+</html>

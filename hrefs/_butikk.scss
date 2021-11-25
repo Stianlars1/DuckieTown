@@ -1,0 +1,399 @@
+/* Stilark for butikken fra mAIN.. =>
+
+*/
+
+@import '../variables';
+
+
+.butikk_site {
+    bottom: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    height: 100%;
+
+    .container {
+        height: 100%;
+        position: relative;
+
+        #fremdrift_bg_butikk {
+            position: absolute;
+            top: 78px;
+            right: -4px;
+            left: -4px;
+            width: 105%;
+        
+        }
+
+
+        main {
+            font-family: "Lato", sans-serif;
+            min-height: 100%;
+            margin-top: 55px;
+            
+        
+            h1 {
+                margin: 50px auto 2rem auto;
+                letter-spacing: 1px;
+                color: $light_blue;
+                font-size: 4rem;
+            }
+        
+            .butikk {
+                min-height: 100%;
+                box-sizing: border-box;
+/*                 overflow: hidden;
+ */                position: relative;
+                width: 100%;
+                background-color: $light_blue;
+                padding-bottom: 30px;
+
+        
+                &::before {
+                    content: "";
+                    background-image: url(../pictures/SVG/Asset4.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: right;
+                    bottom: 99%;
+                    top: -35px;
+                    right: -8px;
+                    left: -8px;
+                    position: absolute;
+                }
+        
+        
+            
+            
+                .preview_robot {
+                    min-height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    padding-top: 50px;
+                    padding-bottom: max;
+        
+                    @media screen and (max-width: 775px) {
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 1rem;
+        
+                    }
+        
+                    
+                    .robot_view_wrapper {
+                        display: flex;
+                        width: 35%;
+                        margin: 15px;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        flex-direction: column;
+
+                        @media screen and (max-width: 775px) {    
+                            max-width: calc(1502px - 35%);
+                            min-width: 100px;
+                            margin-top: 30px;
+                        }
+                        @media screen and (max-width: 640px) {    
+                            max-width: 85%;
+                            min-width: 100px;
+                            margin-top: 30px;
+                        } 
+
+
+                        .robot_product {
+                            max-width: 80%;
+                            min-width: 100px;
+                            display: block;
+                            margin: 0;
+                            padding: 0;
+
+                            @media screen and (max-width: 775px) {    
+                                max-width: 75%;
+                                min-width: 100px;
+                            }
+                            @media screen and (max-width: 640px) {    
+                                max-width: 85%;
+                                min-width: 100px;
+                            }
+                        }
+
+
+                        .showroom {
+                            border: 1px solid $darkmode_dark;
+                            background-color: $darkmode_dark;
+                            width: 60%;
+                            display: flex;
+                            flex-wrap: nowrap;
+                            justify-content: space-evenly;
+                            position: relative;
+                            
+                            .showroom_item {
+                                width: 50px;
+                            }
+
+                            .cursoor {
+                                cursor: pointer;
+                            }
+
+                            
+                        }
+
+                        .showroom_overlay_bg {
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                z-index: 304;
+                                background-color: $darkmode_dark;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                opacity: 0.5;
+                            }
+                        }
+
+
+                        /* Fjerne?? showroom ish.. => ≠
+                        .robot_product_showroom {
+                            width: 7rem;
+                            position: absolute;
+                            bottom: -110px;
+                            cursor: pointer;
+                            margin: 15px;
+                            
+                            &:nth-child(2) {
+                                left: 0%;
+                            }
+                            &:nth-child(3) {
+                                right: 0%;
+                            }
+                        }
+
+                        .nummer_2 {
+                            width: 5.65rem;
+                        }
+                        .nummer_3 {
+                            width: 8rem;
+                            bottom: -120px;
+                        } */
+                        
+                        /* @media screen and (min-width: 775px) {
+                            .robot_product_showroom {
+                                width: 5rem;
+                                position: absolute;
+                                bottom: -110px;
+                                cursor: pointer;
+                                margin: 15px;
+                                
+                                &:nth-child(2) {
+                                    left: -7%;
+                                }
+                                &:nth-child(3) {
+                                    right: -7%;
+                                }
+                                &:nth-child(1) {
+                                    left: 0%;
+                                }
+                            }
+    
+                            .nummer_2 {
+                                width: 4rem;
+                            }
+                            .nummer_3 {
+                                width: 6rem;
+                                bottom: -120px;
+                            }
+
+                            
+                        } */
+
+                        /* .robot_product_showroom_active {
+                            width: 85vw;
+                            position: fixed;
+                            cursor: pointer;
+                            overflow: scroll;
+                            align-self: center;
+                            z-index: 300;
+                            background-color: $darkmode_dark;
+
+                            
+                            @media screen and (min-width: 775px) {
+                                position: fixed;
+                                cursor: pointer;
+                                overflow: scroll;
+                                z-index: 300;
+                                top: 5%;
+                                left: 10%;
+                                background-color: #242424;
+
+                                
+
+                            }
+                            
+                        
+                        }  */
+
+                        @media screen and (max-width: 775px) {    
+                            width: 90%;
+                            min-width: 100px;
+                            margin-top: 30px;
+                        }
+                    }
+
+                    
+        
+                    .robot_description {
+                        width: 53%;
+                        margin: 0;
+
+                        @media screen and (max-width: 775px) {
+                            width: 90%;
+                        }
+        
+                        .info_wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 20px 20px 0 20px;
+                            margin: 15px;
+        
+                            @media screen and (max-width: 640px) {
+                                padding: 0;
+                            }
+        
+                            
+                            
+                            .assi_title {
+                                font-size: 2rem;
+                                display: inline-block;
+                                color: whitesmoke;
+                                letter-spacing: 1px;
+                                border-bottom: 1px solid whitesmoke;
+                                margin: 15px 0;
+                                /* min-width: 320px; */
+                                @media screen and (max-width: 775px) {
+                                    font-size: 2.5rem;
+                                }
+                                @media screen and (max-width: 640px) {
+                                    font-size: 2.2rem;
+                                }
+                            }
+            
+                            h3 {
+                                margin: 0 15px 15px 15px;
+                                color: whitesmoke;
+                                font-size: 1rem;
+                                font-weight: 200;
+                                font-family: "Poppins", open sans-serif, Arial, Helvetica, sans-serif;
+                                width: 120%;
+        
+                                @media screen and (max-width: 775px) {
+                                    width: 100%;
+        
+                                }
+                            }
+                        }
+        
+                        
+        
+                        
+                        // button "Les mer" to see specifications of product etc.. description ++
+                        .autonom_lesmer {
+                            margin: 1.2rem;
+                            padding: 5px 1rem;
+                            background: transparent;
+                            outline: none;
+                            border: 1px solid whitesmoke;
+        
+                            cursor: pointer;
+                            color: whitesmoke;
+                            text-transform: uppercase;
+        
+                            &:hover {
+                                background: white;
+                                color: $darkmode_dark;
+                                transition: all .3s ease;
+
+                                                            animation: all .45s ease
+
+                                
+                            }
+        
+                            &:active, &:focus {
+                                background: transparent;
+                                color: white;
+                                cursor: grabbing;
+                                transform: scale(0.9);
+        
+                            }
+
+        
+        
+                        }       
+                    }
+        
+                    // Shared H3 class.. hidden + visible content...
+        
+                    
+        
+                    // Hidden content // click button => SHOW hidden..
+                    .hidden_info_robot {
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        flex-direction: column;
+                        animation: transformere 0.3s ease ;
+
+                        @keyframes transformere {
+                            0% {transform: translateY(-100%);}
+                            100% {transform: translateY(0%);}
+                        }
+
+        
+                        .more_info_titles {
+                            font-size: 1.7rem;
+                            font-weight: 200;
+                            padding: 40px 0 10px 0;
+                            letter-spacing: 2px;
+                            border-bottom: 0.5px solid white;
+                            
+                            
+                        }
+        
+        
+                        h3 {
+                            margin: 0 15px 15px 15px;
+                            color: whitesmoke;
+                            font-size: 1rem;
+                            font-weight: 200;
+                            font-family: "Poppins", open sans-serif, Arial, Helvetica, sans-serif;
+                            display: block;
+                            width: 90%;
+        
+                            @media screen and (max-width: 775px) {
+                                width: 90%;
+                            }
+                        }
+                        
+        
+                    }
+        
+                    .skjul    {
+                        display: none;
+                        transition: all .5s ease;
+                    }
+
+                    
+        
+                    
+                }
+            }
+        }
+    }
+    
+}
+
+

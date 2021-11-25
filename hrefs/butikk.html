@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assi AS | les mer</title>
+    <meta name="theme-color" content="#3E5A80" />
+
+
+    <!--    Font awesome    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--    Font´s used == Montserrat, Lato & Poppins    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Montserrat:wght@100;400;700;900&family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Indie+Flower&family=Permanent+Marker&family=Shadows+Into+Light&display=swap" rel="stylesheet">  
+
+
+
+    <!--    SCSS / CSS styles    -->
+    <link rel="stylesheet" href="../main.css">
+
+
+
+    <!--        KILDER !!!!     -->
+    <!--    <a href="https://icons8.com/icon/YZHzhN7pF7Dw/approval">Approval icon by Icons8</a>     -->
+
+
+</head>
+<body class="butikk_site">
+
+    <div class="container">
+
+        <!--    Navigasjon // Header    -->
+        <nav id="nav">
+            <a href="../index.html"><img id="header_logo" width="500" src="../pictures/duck.png" alt="Copyright © 2021 Duckietown"></a> <!-- kilde -->
+            <ul>
+                <li><a href="../index.html#prosjektet_container" id="prosjektet_hehe"  class="nav_a">prosjektet</a></li>
+                <li><a href="../index.html#om_oss" class="nav_a">om oss</a></li>
+                <li><a href="../index.html#articles_container" class="nav_a">blogg</a></li>
+                <li><a href="../hrefs/butikk.html" class="nav_a">butikk</a></li>
+
+            </ul>
+
+            <button id="nav_menu_button"><i class="fa fa-bars burger" aria-hidden="true"></i>
+            </button>
+
+            <div id="mobile_nav" class="hidden_nav_mobile hide_nav">
+                <ul>
+                    <li class="mobile_nav_links"><a id="mobile_menu_prosjektet_link" href="../index.html#prosjektet_container">prosjektet</a></li>
+                    <li class="mobile_nav_links"><a id="mobile_menu_om_oss" href="../index.html#om_oss" >om oss</a></li>
+                    <li class="mobile_nav_links"><a href="./butikk.html">butikk</a></li>
+                    <li class="mobile_nav_links"><a id="mobile_menu_blogg" href="../index.html#articles_container">blogg</a></li>
+                </ul>
+
+                <button class="back_from_mobile"></button>
+            </div>
+        </nav>
+        <img id="fremdrift_bg_butikk" src="../pictures/SVG/Asset3test.svg" alt="BG">
+
+
+
+
+        <main>
+            <h1 id="assi_title">Butikk</h1>
+
+            <div class="butikk">
+                <section class="preview_robot">
+                    <div class="robot_view_wrapper">
+                        <img id="showroom_preview" class="robot_product"  src="../pictures/showroom/robot_butikk.png" alt="Bilde av Assi robot"> 
+                        <div class="showroom showroom_overlay_bg">
+                            <img class="showroom_item" src="../pictures/showroom/robot_butikk.png" alt="Bilde av Assi robot"> 
+                            <img class="showroom_item" src="../pictures/showroom/cpu.png" alt="Fugleperspektiv: Cpu lcd skjerm på toppen av Assi robot"> 
+                            <img class="showroom_item" src="../pictures/showroom/robot_show.png" alt="Bilde av Assi roboten fra en annen vinkel">
+
+                        </div>
+                        <!--  FJERNE?????
+                        <img class="robot_product_showroom"  src="../pictures/robot_butikk.png" alt="produkt: en robot-tjeneste"> 
+                        <img class="robot_product_showroom nummer_2" src="../pictures/Fremdrift_bilder/cpu.webp" alt="produkt: en robot-tjeneste"> 
+                        <img class="robot_product_showroom nummer_3"  src="../pictures/robot_show.png" alt="produkt: en robot-tjeneste">  -->
+                        
+                        
+                    </div>
+
+                    <div class="robot_description">
+                        <div class="info_wrapper">
+                            <h2 class="assi_title">
+                                ASSI autonom robot
+                            </h2>
+        
+                            <h3>
+                                Assi selvkjørende robot er et teknologisk framskritt som 
+                                byr på mye moro for utvikler-sjeler. Tjenesten blir levert med standard-base og
+                                grunnleggende teknologi for videre utvikling av roboten til personlige formål. 
+                            </h3>
+
+                            <h4 style="color: whitesmoke; font-family: Lato; font-weight: 400; letter-spacing: 1px;">
+                                Pris: 1699,- NOK
+                            </h4>
+                        </div>
+                        
+
+                        <!-- // SETT PÅ SKJUL I div classlisten.. -->
+                        <div id="hidden_info_robot" class="hidden_info_robot skjul">
+                            <h3 id="more_info_titles" class="more_info_titles">Produktinfo</h3>
+                            <h3>En kul robot....Lorum impsumLorum impsum Lorum impsum Lorum impsum
+                                Lorum impsum Lorum impsum Lorum impsum Lorum impsum Lorum impsum
+                                Lorum impsum Lorum impsum Lorum impsum Lorum impsum
+                            </h3>
+
+                            <h3 class="more_info_titles">Spesifikasjoner</h3>
+                            <h3>
+                                Lengde: 40cm
+                                <br>
+                                bredde: 30cm
+                                <br>
+                                Medfølger: Deler, lcd-skjerm, raspberry pi,  USB-lader & batteripakke.
+                                <br>
+                                Vekt: 1 kg
+
+                            </h3>
+    
+                        </div>
+
+                        <button id="autonom_lesmer" class="autonom_lesmer">les mer</button>
+                        <button id="buy_now_robot" class="autonom_lesmer">kjøp</button>
+                    </div>
+
+
+                </section>
+                
+            </div>
+        </main>
+
+        <footer class="" id="footer_bg">
+            <div class="footer_wrapper">
+                <div class="footer_element" id="footer_info">
+                    <h3>Informasjon</h3>
+                    <ul>
+                        <li><a href="../index.html#om_oss">om oss</a></li>
+                        <li><a href="../hrefs/contact.html">kontakt oss</a></li>
+                        <li><a id="copyrights">Copyrights </a></li>
+                    </ul>
+                </div>
+                <div class="footer_element">
+                    <div class="social_wrapper">
+                        <h3>Sosialt</h3>
+                        <ul class="social">
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="darkmode_wrapper">
+                        <h3>Dark</h3>
+                        <button aria-label="toggle darkmode"  id="darkmode_btn" class="dot_switch">
+                        </button>
+                    </div>
+                    
+                </div>
+
+            
+
+                <!-- Footer CopyRights -->
+                <div id="copyrights_hidden" class="copyrights hidden_copy">
+                    <h2>Copyrights</h2>
+
+                
+
+                    <!-- Copyrights // Kilder ==> liste -->
+                    <ul>
+                        <li><a href="https://www.pexels.com/nb-no/license/">Pexels</a></li>
+                        <li><a href="https://www.piqsels.com/terms-of-service">Piqsels</a></li>
+                        <li><a href="https://fontawesome.com/license">font awesome</a></li>
+                    </ul>
+
+                        <!-- Hidden -->
+                    <button aria-label="close copyright"  id="copyrights_close_button" class="close" type="button"><img  src="../pictures/SVG/times-solid.svg" alt="close_button"></button>
+
+                    
+
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    
+    <script src="./butikk.js"></script>
+</body>
+</html>
