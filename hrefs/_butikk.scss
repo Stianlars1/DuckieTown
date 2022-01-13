@@ -346,6 +346,7 @@
                         align-items: center;
                         flex-direction: column;
                         animation: transformere 0.3s ease ;
+                        box-sizing: border-box;
 
                         @keyframes transformere {
                             0% {transform: translateY(-100%);}
@@ -376,6 +377,10 @@
                             @media screen and (max-width: 775px) {
                                 width: 90%;
                             }
+                        }
+
+                        .assi_butikk_video_preview {
+                            max-width: 90%;
                         }
                         
         

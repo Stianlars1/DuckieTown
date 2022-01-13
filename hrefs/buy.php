@@ -19,7 +19,7 @@ if (empty($name) && empty($email) && empty($message) && empty($phone) && empty($
 }
 
 mail($recipient, $subject, $formcontent, $mailheader);
-header('Location: https://www.stianlarsen.com/index.html');
+header('Location: https://www.stianlarsen.com');
 
 $alert = "Takk for din reservasjon! Din ordre vil bli fulgt opp snarest. Sjekk din mail for videre opplysninger.";
 echo "<script type='text/javascript'>window.location = 'https://www.stianlarsen.com'; alert('$alert');</script>"; 

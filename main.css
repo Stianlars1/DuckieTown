@@ -494,6 +494,8 @@ body #contact_site_container .darkclass {
           flex-direction: column;
   -webkit-animation: transformere 0.3s ease;
           animation: transformere 0.3s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @-webkit-keyframes transformere {
@@ -540,6 +542,10 @@ body #contact_site_container .darkclass {
   .butikk_site .container main .butikk .preview_robot .hidden_info_robot h3 {
     width: 90%;
   }
+}
+
+.butikk_site .container main .butikk .preview_robot .hidden_info_robot .assi_butikk_video_preview {
+  max-width: 90%;
 }
 
 .butikk_site .container main .butikk .preview_robot .skjul {
@@ -1278,6 +1284,7 @@ body .container main .hero .om_oss .personer {
 
 body .container main .hero .om_oss .personer .user_profile {
   width: 100px;
+  border-radius: 50%;
 }
 
 body .container main .hero .om_oss .personer .profiles {
@@ -1566,12 +1573,18 @@ body .container main .hero .fremdrift .fremdrift_wrapper .timeline_wrapper .time
   margin: 1rem;
 }
 
+body .container main .hero .fremdrift .fremdrift_wrapper .timeline_wrapper .timeline_element #assi_video {
+  position: absolute;
+  max-width: 425px;
+  left: -500px;
+  margin: 1rem;
+}
+
 body .container main .hero .fremdrift .fremdrift_wrapper .timeline_wrapper .timeline_element .okonomi {
   border-radius: 0;
 }
 
 body .container main .hero .fremdrift .fremdrift_wrapper .timeline_wrapper .timeline_element .okonomi_height {
-  border-radius: 0;
   height: 100%;
 }
 
@@ -1589,11 +1602,20 @@ body .container main .hero .fremdrift .fremdrift_wrapper .timeline_wrapper .time
     max-height: 90%;
     left: 0px;
   }
+  body .container main .hero .fremdrift .fremdrift_wrapper .timeline_wrapper .timeline_element #assi_video {
+    position: inherit;
+    display: inline-block;
+    max-width: 100%;
+    left: 0px;
+  }
   body .container main .hero .fremdrift .fremdrift_wrapper .timeline_wrapper .timeline_element .logg_photo_uke39 {
     position: inherit;
     max-width: 90%;
     max-height: 90%;
     left: 0px;
+  }
+  body .container main .hero .fremdrift .fremdrift_wrapper .timeline_wrapper .timeline_element .okonomi_height {
+    height: initial;
   }
 }
 
